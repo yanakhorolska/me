@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/me/static/css/main.59b1f075.css",
+    "main.js": "/me/static/js/main.a6df250a.js",
+    "static/media/Default_city_of_the_future_dark_colors_black_gray_modern_style_1_6ed9292a-2f42-4f44-bff0-27d1733ade98_1.jpg": "/me/static/media/Default_city_of_the_future_dark_colors_black_gray_modern_style_1_6ed9292a-2f42-4f44-bff0-27d1733ade98_1.8b2a190c860343cf6018.jpg",
+    "static/media/Leonardo_Creative_icon_of_person_dark_colors_black_blue_digit_3.png": "/me/static/media/Leonardo_Creative_icon_of_person_dark_colors_black_blue_digit_3.ac31fc83aedb52dd82ad.png",
+    "static/media/Leonardo_Diffusion_dark_picture_with_some_lines_dots_abstracti_1.jpg": "/me/static/media/Leonardo_Diffusion_dark_picture_with_some_lines_dots_abstracti_1.eb225bd218d7e772734f.jpg",
+    "index.html": "/me/index.html",
+    "main.59b1f075.css.map": "/me/static/css/main.59b1f075.css.map",
+    "main.a6df250a.js.map": "/me/static/js/main.a6df250a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59b1f075.css",
+    "static/js/main.a6df250a.js"
+  ]
+}
