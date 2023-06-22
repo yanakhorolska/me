@@ -1,4 +1,3 @@
-import { BsFillPersonFill, BsFillHouseDoorFill } from "react-icons/bs";
 import {
   HeaderBox,
   LinksList,
