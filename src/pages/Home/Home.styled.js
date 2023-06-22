@@ -3,9 +3,7 @@ import bg from "../../images/Default_city_of_the_future_dark_colors_black_gray_m
 
 export const HomeBg = styled.div`
   height: 100vh;
-
   background-image: url(${bg});
-
   background-position: center;
   background-size: 100vw;
 `;
@@ -18,14 +16,18 @@ export const ContactButton = styled.button`
   font-size: 25px;
   border-radius: 15px;
   outline: none;
-  border: none;
-  padding: 15px 20px;
+  border: 2px solid #080baa;
+  padding: 12px 20px;
   background-color: #080baa;
   color: #d7f1f4;
   cursor: pointer;
   font-family: "Chivo Mono", monospace;
   font-weight: 600;
   margin-top: 50px;
+  transition: background-color 200ms linear;
+  &:hover {
+    background-color: transparent;
+  }
 `;
 
 export const MainHeader = styled.h1`

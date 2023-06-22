@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
+import { BsFillPersonFill, BsFillHouseDoorFill } from "react-icons/bs";
+import { RiArchiveFill } from "react-icons/ri";
 
 export const HeaderBox = styled.header`
   position: absolute;
@@ -23,7 +25,6 @@ export const LinksList = styled.div`
 export const Link = styled(NavLink)`
   font-size: 25px;
   text-decoration: none;
-  color: #d7f1f4;
   font-weight: 400;
   &.active {
     text-decoration: underline;
@@ -41,3 +42,34 @@ export const Link = styled(NavLink)`
 //   border: 1px solid rgb(8, 11, 170);
 //   border-radius: 30px;
 // `;
+
+export const LinksBox = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  transition: color 200ms linear;
+  &:hover {
+    color: #080baa;
+  }
+`;
+
+export const IconHome = styled(BsFillHouseDoorFill)`
+  margin-right: 10px;
+  height: 20px;
+`;
+
+export const IconAbout = styled(BsFillPersonFill)`
+  margin-right: 10px;
+  height: 20px;
+`;
+
+export const IconProjects = styled(RiArchiveFill)`
+  margin-right: 10px;
+  height: 20px;
+`;
+
+export const IconContact = styled(BsFillHouseDoorFill)`
+  margin-right: 10px;
+  height: 20px;
+`;

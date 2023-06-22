@@ -1,16 +1,38 @@
-import { HeaderBox, LinksList, Link, Nav, Backdrop } from "./Header.styled.js";
+import { BsFillPersonFill, BsFillHouseDoorFill } from "react-icons/bs";
+import {
+  HeaderBox,
+  LinksList,
+  Link,
+  Nav,
+  LinksBox,
+  IconHome,
+  IconAbout,
+  IconProjects,
+  IconContact,
+} from "./Header.styled.js";
 
 export const Header = () => {
   return (
     <HeaderBox>
       <Nav>
-        <Link to="/">Main</Link>
+        <LinksBox>
+          <IconHome />
+          <Link to="/">Main</Link>
+        </LinksBox>
         <LinksList>
-          <Link to="/about">About me</Link>
+          <LinksBox>
+            <IconAbout />
+            <Link to="/about">About me</Link>
+          </LinksBox>
+          <LinksBox>
+            <IconProjects />
+            <Link to="/projects">My projects</Link>
+          </LinksBox>
 
-          <Link to="/projects">My projects</Link>
-
-          <Link to="/contacts">Contacts</Link>
+          <LinksBox>
+            <IconContact />
+            <Link to="/contacts">Contacts</Link>
+          </LinksBox>
         </LinksList>
       </Nav>
     </HeaderBox>
