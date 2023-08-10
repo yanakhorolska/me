@@ -5,7 +5,7 @@ export const AboutBox = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
+  height: 100vh;
   color: white;
 `;
 export const PageBox = styled.section`

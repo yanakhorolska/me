@@ -2,26 +2,26 @@ import { ContainerBox } from "../../Components/Container/Container.styled";
 import {
   AboutBox,
   PageBox,
-  RoundBox,
-  Img,
-  TextBox,
-  AboutSection,
-  ServicesSection,
-  ServicesHeader,
-  TextHeader,
-  TextDescription,
-  StackBlock,
-  StackHeader,
-  StackItem,
+  // RoundBox,
+  // Img,
+  // TextBox,
+  // AboutSection,
+  // ServicesSection,
+  // ServicesHeader,
+  // TextHeader,
+  // TextDescription,
+  // StackBlock,
+  // StackHeader,
+  // StackItem,
 } from "./About.styled";
-import girl from "../../images/Leonardo_Creative_icon_of_person_dark_colors_black_blue_digit_3.png";
+// import girl from "../../images/Leonardo_Creative_icon_of_person_dark_colors_black_blue_digit_3.png";
 
 export const About = () => {
   return (
     <AboutBox>
       <PageBox>
         <ContainerBox>
-          <AboutSection>
+          {/* <AboutSection>
             <TextBox>
               <TextHeader>Who am i?</TextHeader>
               <TextDescription>
@@ -56,7 +56,7 @@ export const About = () => {
           </AboutSection>
           <ServicesSection>
             <ServicesHeader>My services</ServicesHeader>
-          </ServicesSection>
+          </ServicesSection> */}
         </ContainerBox>
       </PageBox>
     </AboutBox>
