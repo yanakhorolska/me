@@ -27,8 +27,15 @@ export const Link = styled(NavLink)`
   text-decoration: none;
   font-weight: 400;
   &.active {
-    text-decoration: underline;
-    text-decoration-color: #080baa;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #d7f1f4;
+      display: block;
+      transition: width 1s;
+    }
   }
 `;
 // export const Backdrop = styled.div`
@@ -44,32 +51,44 @@ export const Link = styled(NavLink)`
 // `;
 
 export const LinksBox = styled.div`
-  display: flex;
-  align-items: center;
+  display: block;
   cursor: pointer;
-  color: white;
-  transition: color 200ms linear;
-  &:hover {
-    color: #080baa;
+  color: #d7f1f4;
+  position: relative;
+  &::after {
+    background-color: #d7f1f4;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    width: 0;
+    transition: width 0.35s;
+  }
+  &:hover::after {
+    width: 100%;
   }
 `;
 
 export const IconHome = styled(BsFillHouseDoorFill)`
   margin-right: 10px;
   height: 20px;
+  fill: #008b8b;
 `;
 
 export const IconAbout = styled(BsFillPersonFill)`
   margin-right: 10px;
   height: 20px;
+  fill: #008b8b;
 `;
 
 export const IconProjects = styled(RiArchiveFill)`
   margin-right: 10px;
   height: 20px;
+  fill: #008b8b;
 `;
 
 export const IconContact = styled(BsFillHouseDoorFill)`
   margin-right: 10px;
+  fill: #008b8b;
   height: 20px;
 `;

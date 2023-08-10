@@ -16,17 +16,18 @@ export const ContactButton = styled.button`
   font-size: 25px;
   border-radius: 15px;
   outline: none;
-  border: 2px solid #080baa;
+  border: 2px solid #d7f1f4;
   padding: 12px 20px;
-  background-color: #080baa;
+  background-color: transparent;
   color: #d7f1f4;
   cursor: pointer;
   font-family: "Chivo Mono", monospace;
   font-weight: 600;
   margin-top: 50px;
-  transition: background-color 200ms linear;
+  transition: all 350ms linear;
   &:hover {
-    background-color: transparent;
+    background-color: #d7f1f4;
+    color: black;
   }
 `;
 
@@ -42,17 +43,22 @@ export const SecondHeader = styled.h2`
 `;
 
 export const Span = styled.span`
-  color: #080baa;
+  color: #008b8b;
   font-size: 30px;
+  font-weight: 700;
 `;
 
 export const Backdrop = styled.div`
   height: 100%;
   background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.9) 40%,
-    rgba(0, 0, 0, 0.6) 60%
+    to bottom,
+    rgba(0, 0, 0, 0.9) 20%,
+    rgba(0, 0, 0, 0.8) 80%
   );
   display: flex;
   align-items: center;
+`;
+export const Icon = styled.img`
+  display: inline;
+  margin-left: 20px;
 `;

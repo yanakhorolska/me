@@ -1,12 +1,14 @@
 import { ContainerBox } from "../../Components/Container/Container.styled";
-import { ContactsBox, PageBox } from "./Contacts.styled";
+import { Backdrop, ContactsBox, PageBox } from "./Contacts.styled";
 
 export const Contacts = () => {
   return (
     <ContactsBox>
-      <PageBox>
-        <ContainerBox>Contacts</ContainerBox>
-      </PageBox>
+      <Backdrop>
+        <PageBox>
+          <ContainerBox>Contacts</ContainerBox>
+        </PageBox>
+      </Backdrop>
     </ContactsBox>
   );
 };

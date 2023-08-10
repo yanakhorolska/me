@@ -4,12 +4,15 @@ import {
   MainHeader,
   SecondHeader,
   ContactButton,
-  Span,
   Backdrop,
+  Icon,
+  Span,
 } from "./Home.styled.js";
+import "../../animation.css";
 import { ContainerBox } from "../../Components/Container/Container.styled.js";
 import { ContactsModal } from "../../Components/ContactsModal/ContactsModal.jsx";
 import { useState } from "react";
+import svg from "../../images/hand-wave.svg";
 
 export const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,14 +24,20 @@ export const Home = () => {
       <Backdrop>
         <ContainerBox>
           <TextBlock>
-            <MainHeader>
-              Hello<Span>.</Span>
-            </MainHeader>
-            <SecondHeader>I am a fullstack developer and i can</SecondHeader>
-            <SecondHeader>help you with your</SecondHeader>
+            <MainHeader>Hello</MainHeader>
+            <Icon
+              className="hand"
+              src={svg}
+              alt="hand"
+              width="40"
+              height="40"
+            />
+            <SecondHeader>Welcome to my Portfolio Website!</SecondHeader>
             <SecondHeader>
-              website or mobile application<Span>.</Span>
+              I am a passionate <Span>Full-Stack Developer</Span>
             </SecondHeader>
+            <SecondHeader>with a love for crafting</SecondHeader>
+            <SecondHeader>innovative digital solutions.</SecondHeader>
 
             <ContactButton onClick={onModalClick}>Contact me</ContactButton>
           </TextBlock>
