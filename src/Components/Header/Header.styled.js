@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
 import { BsFillPersonFill, BsFillHouseDoorFill } from "react-icons/bs";
 import { RiArchiveFill } from "react-icons/ri";
+import { AiFillPhone } from "react-icons/ai";
 
 export const HeaderBox = styled.header`
   position: absolute;
@@ -87,7 +88,7 @@ export const IconProjects = styled(RiArchiveFill)`
   fill: #008b8b;
 `;
 
-export const IconContact = styled(BsFillHouseDoorFill)`
+export const IconContact = styled(AiFillPhone)`
   margin-right: 10px;
   fill: #008b8b;
   height: 20px;

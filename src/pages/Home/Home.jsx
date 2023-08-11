@@ -19,6 +19,9 @@ export const Home = () => {
   const onModalClick = () => {
     setIsModalOpen(true);
   };
+  const onClose = () => {
+    setIsModalOpen(false);
+  };
   return (
     <HomeBg>
       <Backdrop>
@@ -43,7 +46,7 @@ export const Home = () => {
           </TextBlock>
         </ContainerBox>
       </Backdrop>
-      {isModalOpen && <ContactsModal />}
+      {isModalOpen && <ContactsModal onModal={() => onClose()} />}
     </HomeBg>
   );
 };
