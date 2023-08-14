@@ -5,7 +5,7 @@ import { IoIosPin } from "react-icons/io";
 import { IoIosCall } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
 import { IoMdPersonAdd } from "react-icons/io";
-import { IoLogoInstagram } from "react-icons/io";
+
 import { IoLogoLinkedin } from "react-icons/io";
 import { IoLogoGithub } from "react-icons/io";
 
@@ -33,6 +33,7 @@ export const Box = styled.div`
   margin: 0 auto 50px;
   border-radius: 10px;
   padding: 50px;
+  position: relative;
 `;
 export const SecondBox = styled.div`
   background-color: rgba(255, 255, 255, 0.08);
@@ -41,6 +42,15 @@ export const SecondBox = styled.div`
   margin: 0 auto;
   border-radius: 10px;
   padding: 50px;
+  position: relative;
+`;
+export const StickBox = styled.div`
+  width: 5px;
+  background-color: #008b8b;
+  max-height: 100%;
+  top: 50px;
+  bottom: 50px;
+  position: absolute;
 `;
 export const BlockBox = styled.div`
   background-color: rgba(255, 255, 255, 0.08);
@@ -80,7 +90,7 @@ export const Input = styled.input`
   outline: none;
   border: none;
   font-size: 15px;
-  color: #d7f1f4;
+  color: rgba(215, 241, 244, 0.9);
   transition: all 300ms linear;
   &:focus,
   :hover {
@@ -96,7 +106,7 @@ export const Message = styled.textarea`
   outline: none;
   border: none;
   font-size: 15px;
-  color: #d7f1f4;
+  color: rgba(215, 241, 244, 0.9);
   resize: none;
   transition: all 300ms linear;
   &:focus,
@@ -108,7 +118,7 @@ export const Label = styled.label`
   display: flex;
   flex-direction: column;
   gap: 5px;
-  color: #d7f1f4;
+  color: rgba(215, 241, 244, 0.9);
 `;
 export const SendButton = styled.button`
   margin: 0 auto;
@@ -142,6 +152,7 @@ export const IconLocation = styled(IoIosPin)`
   padding: 5px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 `;
 
 export const IconEmail = styled(MdAlternateEmail)`
@@ -151,6 +162,7 @@ export const IconEmail = styled(MdAlternateEmail)`
   padding: 5px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 `;
 
 export const IconPhone = styled(IoIosCall)`
@@ -160,6 +172,7 @@ export const IconPhone = styled(IoIosCall)`
   padding: 5px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 `;
 
 export const IconSocials = styled(IoMdPersonAdd)`
@@ -169,21 +182,11 @@ export const IconSocials = styled(IoMdPersonAdd)`
   padding: 5px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-`;
-
-export const IconInstagram = styled(IoLogoInstagram)`
-  fill: rgba(255, 255, 255, 0.5);
-  height: 30px;
-  width: 30px;
-  transition: all 300ms linear;
-  &:focus,
-  :hover {
-    fill: #008b8b;
-  }
+  border: 1px solid rgba(255, 255, 255, 0.5);
 `;
 
 export const IconLinkedin = styled(IoLogoLinkedin)`
-  fill: rgba(255, 255, 255, 0.5);
+  fill: rgba(215, 241, 244, 0.9);
   height: 30px;
   width: 30px;
   transition: all 300ms linear;
@@ -194,7 +197,7 @@ export const IconLinkedin = styled(IoLogoLinkedin)`
 `;
 
 export const IconGithub = styled(IoLogoGithub)`
-  fill: rgba(255, 255, 255, 0.5);
+  fill: rgba(215, 241, 244, 0.9);
   height: 30px;
   width: 30px;
   transition: all 300ms linear;
@@ -205,7 +208,7 @@ export const IconGithub = styled(IoLogoGithub)`
 `;
 export const TextInfo = styled.a`
   font-size: 17px;
-  color: #d7f1f4;
+  color: rgba(215, 241, 244, 0.9);
   text-decoration: none;
   transition: all 300ms linear;
   &:hover {

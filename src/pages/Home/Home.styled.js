@@ -9,24 +9,24 @@ export const HomeBg = styled.div`
 `;
 
 export const TextBlock = styled.div`
-  color: #d7f1f4;
+  color: rgba(215, 241, 244, 0.9);
 `;
 
 export const ContactButton = styled.button`
   font-size: 25px;
   border-radius: 15px;
   outline: none;
-  border: 2px solid #d7f1f4;
+  border: 2px solid rgba(215, 241, 244, 0.9);
   padding: 12px 20px;
   background-color: transparent;
-  color: #d7f1f4;
+  color: rgba(215, 241, 244, 0.9);
   cursor: pointer;
   font-family: "Chivo Mono", monospace;
   font-weight: 600;
   margin-top: 50px;
   transition: all 350ms linear;
   &:hover {
-    background-color: #d7f1f4;
+    background-color: rgba(215, 241, 244, 0.9);
     color: black;
   }
 `;

@@ -33,7 +33,7 @@ export const Link = styled(NavLink)`
       position: absolute;
       width: 100%;
       height: 2px;
-      background-color: #d7f1f4;
+      background-color: rgba(215, 241, 244, 0.9);
       display: block;
       transition: width 1s;
     }
@@ -54,10 +54,10 @@ export const Link = styled(NavLink)`
 export const LinksBox = styled.div`
   display: block;
   cursor: pointer;
-  color: #d7f1f4;
+  color: rgba(215, 241, 244, 0.9);
   position: relative;
   &::after {
-    background-color: #d7f1f4;
+    background-color: rgba(215, 241, 244, 0.9);
     content: "";
     display: block;
     height: 2px;

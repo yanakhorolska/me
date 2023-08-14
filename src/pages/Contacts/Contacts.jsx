@@ -22,6 +22,7 @@ import {
   IconGithub,
   IconLinkedin,
   SecondBox,
+  StickBox,
 } from "./Contacts.styled";
 
 export const Contacts = () => {
@@ -31,6 +32,7 @@ export const Contacts = () => {
         <PageBox>
           <ContainerBox>
             <Box>
+              <StickBox></StickBox>
               <SocialsBox>
                 <BlockBox>
                   <IconLocation />
@@ -81,26 +83,27 @@ export const Contacts = () => {
             </Box>
 
             <SecondBox>
+              <StickBox></StickBox>
               <Form>
                 <MessageBox>
                   <MessagePart>
                     <Label>
                       Name:
-                      <Input></Input>
+                      <Input type="text" required></Input>
                     </Label>
                     <Label>
                       Phone:
-                      <Input></Input>
+                      <Input type="text"></Input>
                     </Label>
                     <Label>
                       Email:
-                      <Input></Input>
+                      <Input type="email" required></Input>
                     </Label>
                   </MessagePart>
                   <MessagePart>
                     <Label>
                       Message:
-                      <Message rows="5"></Message>
+                      <Message required rows="5"></Message>
                     </Label>
                   </MessagePart>
                 </MessageBox>
