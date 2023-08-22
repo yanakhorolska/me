@@ -19,29 +19,21 @@ export const Backdrop = styled.div`
     rgba(0, 0, 0, 0.7) 80%
   );
 `;
-export const StickBox = styled.div`
-  width: 5px;
-  background-color: #008b8b;
-  max-height: 100%;
-  top: 40px;
-  bottom: 40px;
-  left: 60px;
-  border-radius: 10px;
-  position: absolute;
-`;
+
 export const MoreButton = styled.button`
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: #008b8b;
   border-radius: 50%;
   border: none;
-  color: #d7f1f4;
+  color: #111;
   bottom: 40px;
   right: 60px;
   position: absolute;
-  font-size: 15px;
+  font-size: 20px;
   cursor: pointer;
   transition: all 200ms linear;
+
   &:hover,
   :focus {
     scale: calc(1.2);
@@ -51,8 +43,8 @@ export const BackdropImg = styled.div`
   height: 100%;
   background-image: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.5) 20%,
-    rgba(0, 0, 0, 0.5) 80%
+    rgba(0, 0, 0, 0.4) 20%,
+    rgba(0, 0, 0, 0.4) 80%
   );
   border-radius: 10px;
   &:hover,
@@ -69,13 +61,15 @@ export const PageBox = styled.section`
   padding: 150px 0px;
 `;
 export const ProjectCard = styled.div`
-  background-color: rgba(60, 60, 60, 0.5);
+  background-color: rgba(60, 60, 60, 0.2);
+  backdrop-filter: blur(10px);
   width: 1200px;
   margin: 0 auto 50px;
   border-radius: 10px;
   padding: 40px 90px;
   display: flex;
   align-items: center;
+  box-shadow: 2px 2px 14px 5px rgba(0, 0, 0, 0.8);
   gap: 50px;
   position: relative;
 `;
@@ -99,12 +93,14 @@ export const ProjectPetlyImgBox = styled.div`
   background: url(${petly});
   background-size: cover;
   background-position: center;
+  box-shadow: 2px 2px 14px 5px rgba(0, 0, 0, 0.3);
 `;
 export const ProjectWeatherImgBox = styled.div`
   width: 400px;
   height: 250px;
   border-radius: 10px;
   background: url(${weather});
+  box-shadow: 2px 2px 14px 5px rgba(0, 0, 0, 0.3);
   background-size: cover;
   background-position: center;
 `;
@@ -117,6 +113,8 @@ export const ProjectLinkBox = styled.div`
 export const ProjectLink = styled.a`
   display: block;
   transition: all 300ms linear;
+  text-decoration: underline;
+  color: rgba(215, 241, 244, 0.9);
   &:hover,
   :focus {
     color: #008b8b;

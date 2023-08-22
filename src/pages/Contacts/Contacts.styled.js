@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import bg from "../../images/Leonardo_Diffusion_background_image_for_website_dark_colors_di_0.jpg";
+import bg from "../../images/Default_background_image_for_website_dark_colors_digital_lapto_3_780e4ed4-ef8b-4835-be7c-27a872eccc39_1.jpg";
 import { FiMail } from "react-icons/fi";
 import { IoIosPin } from "react-icons/io";
 import { IoIosCall } from "react-icons/io";
@@ -27,7 +27,9 @@ export const Backdrop = styled.div`
   );
 `;
 export const Box = styled.div`
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(60, 60, 60, 0.2);
+  box-shadow: 2px 2px 14px 5px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
   max-width: 1000px;
   max-height: 100%;
   margin: 0 auto 50px;
@@ -36,7 +38,9 @@ export const Box = styled.div`
   position: relative;
 `;
 export const SecondBox = styled.div`
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(60, 60, 60, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 2px 2px 14px 5px rgba(0, 0, 0, 0.8);
   max-width: 1000px;
   max-height: 100%;
   margin: 0 auto;
@@ -53,7 +57,7 @@ export const StickBox = styled.div`
   position: absolute;
 `;
 export const BlockBox = styled.div`
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   width: 400px;
   height: 70px;
@@ -84,7 +88,7 @@ export const Form = styled.form``;
 export const Input = styled.input`
   display: block;
   width: 400px;
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   padding: 10px;
   outline: none;
@@ -94,13 +98,13 @@ export const Input = styled.input`
   transition: all 300ms linear;
   &:focus,
   :hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
   }
 `;
 export const Message = styled.textarea`
   display: block;
   width: 400px;
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   padding: 10px;
   outline: none;
@@ -111,7 +115,7 @@ export const Message = styled.textarea`
   transition: all 300ms linear;
   &:focus,
   :hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
   }
 `;
 export const Label = styled.label`

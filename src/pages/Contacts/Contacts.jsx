@@ -103,7 +103,7 @@ export const Contacts = () => {
                   <MessagePart>
                     <Label>
                       Message:
-                      <Message required rows="5"></Message>
+                      <Message required rows="6"></Message>
                     </Label>
                   </MessagePart>
                 </MessageBox>

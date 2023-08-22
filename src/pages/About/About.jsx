@@ -1,64 +1,111 @@
 import { ContainerBox } from "../../Components/Container/Container.styled";
 import {
   AboutBox,
+  Backdrop,
   PageBox,
-  // RoundBox,
-  // Img,
-  // TextBox,
-  // AboutSection,
-  // ServicesSection,
-  // ServicesHeader,
-  // TextHeader,
-  // TextDescription,
-  // StackBlock,
-  // StackHeader,
-  // StackItem,
+  Box,
+  IntroductionBox,
+  IntroductionText,
+  IntroductionSpan,
+  IntroductionDescribe,
+  StackBox,
+  StackItem,
+  IntroductionTitle,
+  IntroductionImg,
+  StackTitle,
+  StackItemTitle,
 } from "./About.styled";
-// import girl from "../../images/Leonardo_Creative_icon_of_person_dark_colors_black_blue_digit_3.png";
 
 export const About = () => {
   return (
     <AboutBox>
-      <PageBox>
-        <ContainerBox>
-          {/* <AboutSection>
-            <TextBox>
-              <TextHeader>Who am i?</TextHeader>
-              <TextDescription>
-                Hello and welcome to my portfolio website! My name is Yana, and
-                I am a full-stack developer with a passion for creating
-                beautiful and functional websites and applications. I currently
-                reside in Poland, though I am originally from Ukraine. I have
-                extensive experience working on both individual and team
-                projects. I completed a year-long course at GOIT, a Ukrainian
-                programming school, where I honed my skills in full-stack
-                development. Additionally, I pursued formal education at
-                Cosinus, a Polish vocational school, where I studied to become a
-                technician-informatician and web programmer. If you have any
-                questions or would like to discuss a potential project, please
-                don't hesitate to contact me.
-              </TextDescription>
-              <StackHeader>My technology stack</StackHeader>
-              <StackBlock>
-                <StackItem>html</StackItem>
-                <StackItem>css</StackItem>
-                <StackItem>javascript</StackItem>
-                <StackItem>react</StackItem>
-                <StackItem>typescript</StackItem>
-                <StackItem>nodejs</StackItem>
-                <StackItem>express</StackItem>
-                <StackItem>mongodb</StackItem>
-              </StackBlock>
-            </TextBox>
-            <RoundBox>
-              <Img src={girl} alt="person" />
-            </RoundBox>
-          </AboutSection>
-          <ServicesSection>
-            <ServicesHeader>My services</ServicesHeader>
-          </ServicesSection> */}
-        </ContainerBox>
-      </PageBox>
+      <Backdrop>
+        <PageBox>
+          <ContainerBox>
+            <Box>
+              <IntroductionBox>
+                <IntroductionImg></IntroductionImg>
+                <IntroductionDescribe>
+                  <IntroductionTitle>Who am i?</IntroductionTitle>
+                  <IntroductionText>
+                    Hello, I'm Yana, a passionate and dedicated{" "}
+                    <IntroductionSpan>full-stack developer</IntroductionSpan>{" "}
+                    with a flair for creating immersive digital experiences.
+                    With a blend of technical expertise and creative
+                    problem-solving, I craft solutions that seamlessly integrate
+                    front-end and back-end functionalities. My journey in the
+                    world of development has been an exciting exploration of the
+                    ever-evolving landscape of technologies.
+                  </IntroductionText>
+                  <br />
+                  <IntroductionText>
+                    An enthusiastic developer with a knack for rapid learning
+                    and adaptability. Proven ability to quickly grasp new
+                    technologies and concepts, translating them into effective
+                    solutions. Strong interpersonal skills, including effective
+                    <IntroductionSpan> communication</IntroductionSpan>,{" "}
+                    <IntroductionSpan>teamwork</IntroductionSpan>, and{" "}
+                    <IntroductionSpan>
+                      creative problem-solving
+                    </IntroductionSpan>
+                    . Committed to continuous growth and contributing to dynamic
+                    development projects.
+                  </IntroductionText>
+                  <IntroductionText></IntroductionText>
+                </IntroductionDescribe>
+              </IntroductionBox>
+              <StackBox>
+                <StackTitle>My technology stack</StackTitle>
+                <StackItem>
+                  <StackItemTitle>HTML</StackItemTitle>
+                </StackItem>
+                <StackItem>
+                  <StackItemTitle>CSS</StackItemTitle>
+                </StackItem>
+                <StackItem>
+                  <StackItemTitle>JS</StackItemTitle>
+                </StackItem>
+                <StackItem>
+                  <StackItemTitle>React.js</StackItemTitle>
+                </StackItem>
+                <StackItem>
+                  <StackItemTitle>Node.js</StackItemTitle>
+                </StackItem>
+                <StackItem>
+                  <StackItemTitle>Express.js</StackItemTitle>
+                </StackItem>
+                <StackItem>
+                  <StackItemTitle>Vercel</StackItemTitle>
+                </StackItem>
+                <StackItem>
+                  <StackItemTitle>MongoDb</StackItemTitle>
+                </StackItem>
+                <StackItem>
+                  <StackItemTitle>TailwindCSS</StackItemTitle>
+                </StackItem>
+                <StackItem>
+                  <StackItemTitle>Figma</StackItemTitle>
+                </StackItem>
+                <StackItem>
+                  <StackItemTitle>Git</StackItemTitle>
+                </StackItem>
+                <StackItem>
+                  <StackItemTitle>VS Code</StackItemTitle>
+                </StackItem>
+                <StackItem>
+                  <StackItemTitle>Redux Toolkit</StackItemTitle>
+                </StackItem>
+                <StackItem>
+                  <StackItemTitle>React Query</StackItemTitle>
+                </StackItem>
+                <StackItem>
+                  <StackItemTitle>Sass</StackItemTitle>
+                </StackItem>
+              </StackBox>
+            </Box>
+          </ContainerBox>
+        </PageBox>
+      </Backdrop>
     </AboutBox>
   );
 };

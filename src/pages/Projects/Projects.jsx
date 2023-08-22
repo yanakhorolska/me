@@ -13,7 +13,6 @@ import {
   ProjectWeatherImgBox,
   IconLink,
   BackdropImg,
-  StickBox,
   MoreButton,
 } from "./Projects.styled";
 
@@ -24,8 +23,8 @@ export const Projects = () => {
         <PageBox>
           <ContainerBox>
             <ProjectCard>
-              <MoreButton>More</MoreButton>
-              <StickBox></StickBox>
+              <MoreButton>+</MoreButton>
+
               <ProjectPetlyImgBox>
                 <BackdropImg />
               </ProjectPetlyImgBox>
@@ -42,21 +41,27 @@ export const Projects = () => {
                 </ProjectText>
                 <ProjectLinkBox>
                   <IconLink />
-                  <ProjectLink href="https://pets-front-end.vercel.app/">
+                  <ProjectLink
+                    target="_blank"
+                    href="https://pets-front-end.vercel.app/"
+                  >
                     https://pets-front-end.vercel.app/
                   </ProjectLink>
                 </ProjectLinkBox>
                 <ProjectLinkBox>
                   <IconLink />
-                  <ProjectLink href="https://pets-back-end.vercel.app/">
+                  <ProjectLink
+                    target="_blank"
+                    href="https://pets-back-end.vercel.app/"
+                  >
                     https://pets-back-end.vercel.app/
                   </ProjectLink>
                 </ProjectLinkBox>
               </ProjectDescr>
             </ProjectCard>
             <ProjectCard>
-              <MoreButton>More</MoreButton>
-              <StickBox></StickBox>
+              <MoreButton>+</MoreButton>
+
               <ProjectWeatherImgBox>
                 <BackdropImg />
               </ProjectWeatherImgBox>
@@ -75,7 +80,10 @@ export const Projects = () => {
 
                 <ProjectLinkBox>
                   <IconLink />
-                  <ProjectLink href="https://yanakhorolska.github.io/weather--app/">
+                  <ProjectLink
+                    target="_blank"
+                    href="https://yanakhorolska.github.io/weather--app/"
+                  >
                     https://yanakhorolska.github.io/weather--app/
                   </ProjectLink>
                 </ProjectLinkBox>
