@@ -1,126 +1,213 @@
 import styled from "@emotion/styled";
 import bg from "../../images/Leonardo_Diffusion_dark_picture_with_some_lines_dots_abstracti_1.jpg";
 import petly from "../../images/petly.jpg";
-import { FiLink } from "react-icons/fi";
 import weather from "../../images/weather.jpg";
-export const ProjectsBox = styled.div`
-  background: url(${bg});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: rgba(215, 241, 244, 0.6);
+import girl from "../../images/Leonardo_Diffusion_girlcat_with_headphones_and_laptop_digital_2.jpg";
+import taskBg from "../../images/Default_background_image_for_website_dark_colors_digital_lapto_0_2cefb854-032c-47e6-b827-5bee2040b37f_1.jpg";
+
+export const ProjectsBox = styled.main`
+  min-height: 100vh;
+  background: url(${bg}) center / cover fixed;
+  color: #eef6ff;
 `;
+
 export const Backdrop = styled.div`
-  height: 100%;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.8) 20%,
-    rgba(0, 0, 0, 0.7) 80%
-  );
-`;
-
-export const MoreButton = styled.button`
-  width: 40px;
-  height: 40px;
-  background-color: #008b8b;
-  border-radius: 50%;
-  border: none;
-  color: #111;
-  bottom: 40px;
-  right: 60px;
-  position: absolute;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 200ms linear;
-
-  &:hover,
-  :focus {
-    scale: calc(1.2);
-  }
-`;
-export const BackdropImg = styled.div`
-  height: 100%;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.4) 20%,
-    rgba(0, 0, 0, 0.4) 80%
-  );
-  border-radius: 10px;
-  &:hover,
-  :focus {
-    background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.3) 20%,
-      rgba(0, 0, 0, 0.3) 80%
-    );
-  }
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(2, 10, 22, 0.92), rgba(2, 10, 22, 0.97));
 `;
 
 export const PageBox = styled.section`
-  padding: 150px 0px;
-`;
-export const ProjectCard = styled.div`
-  background-color: rgba(60, 60, 60, 0.2);
-  backdrop-filter: blur(10px);
-  width: 1200px;
-  margin: 0 auto 50px;
-  border-radius: 10px;
-  padding: 40px 90px;
-  display: flex;
-  align-items: center;
-  box-shadow: 2px 2px 14px 5px rgba(0, 0, 0, 0.8);
-  gap: 50px;
-  position: relative;
-`;
-export const ProjectDescr = styled.div`
-  width: 700px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-`;
-export const ProjectTitle = styled.h2`
-  margin-bottom: 20px;
-  color: rgba(215, 241, 244, 0.8);
-`;
-export const ProjectText = styled.p`
-  margin-bottom: 20px;
-`;
-export const ProjectPetlyImgBox = styled.div`
-  width: 400px;
-  height: 250px;
-  border-radius: 10px;
-  background: url(${petly});
-  background-size: cover;
-  background-position: center;
-  box-shadow: 2px 2px 14px 5px rgba(0, 0, 0, 0.3);
-`;
-export const ProjectWeatherImgBox = styled.div`
-  width: 400px;
-  height: 250px;
-  border-radius: 10px;
-  background: url(${weather});
-  box-shadow: 2px 2px 14px 5px rgba(0, 0, 0, 0.3);
-  background-size: cover;
-  background-position: center;
+  padding: 118px 0 64px;
 `;
 
-export const ProjectLinkBox = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 15px;
+export const Eyebrow = styled.p`
+  color: #31dce8;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
 `;
-export const ProjectLink = styled.a`
-  display: block;
-  transition: all 300ms linear;
-  text-decoration: underline;
-  color: rgba(215, 241, 244, 0.9);
-  &:hover,
-  :focus {
-    color: #008b8b;
+
+export const PageTitle = styled.h1`
+  font-size: clamp(58px, 8vw, 92px);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+  color: #ffffff;
+`;
+
+export const Accent = styled.span`
+  color: #31dce8;
+`;
+
+export const Intro = styled.p`
+  margin-top: 12px;
+  max-width: 640px;
+  color: #a7b6ca;
+  font-size: 17px;
+  line-height: 1.55;
+`;
+
+export const FeaturedCard = styled.section`
+  display: grid;
+  grid-template-columns: 1.28fr 0.92fr;
+  gap: 24px;
+  padding: 22px;
+  margin-top: 28px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(7, 21, 39, 0.88), rgba(4, 14, 28, 0.92));
+  border: 1px solid rgba(72, 173, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+
+  @media (max-width: 880px) {
+    grid-template-columns: 1fr;
   }
 `;
-export const IconLink = styled(FiLink)`
-  height: 20px;
-  width: 20px;
+
+export const FeaturedImage = styled.div`
+  min-height: 340px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(4, 12, 24, 0.18), rgba(4, 12, 24, 0.48)), url(${taskBg}) center / cover no-repeat;
+  border: 1px solid rgba(74, 166, 255, 0.17);
+`;
+
+export const FeaturedContent = styled.div`
+  align-self: center;
+  padding: 14px 8px;
+`;
+
+export const Badge = styled.span`
+  display: inline-flex;
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: #52e7f1;
+  background: rgba(49, 220, 232, 0.08);
+  border: 1px solid rgba(49, 220, 232, 0.24);
+  font-size: 12px;
+  margin-bottom: 14px;
+`;
+
+export const ProjectTitle = styled.h2`
+  color: #ffffff;
+  font-size: 30px;
+  letter-spacing: -0.03em;
+`;
+
+export const ProjectSubtitle = styled.h3`
+  margin-top: 4px;
+  color: #4aa7ff;
+  font-size: 20px;
+  font-weight: 500;
+`;
+
+export const ProjectText = styled.p`
+  margin-top: 12px;
+  color: #a8b8cb;
+  line-height: 1.58;
+`;
+
+export const Tags = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+`;
+
+export const Tag = styled.span`
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: rgba(12, 34, 57, 0.86);
+  border: 1px solid rgba(77, 161, 244, 0.17);
+  color: #bcd0e7;
+  font-size: 11px;
+`;
+
+export const Actions = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+`;
+
+export const PrimaryLink = styled.a`
+  min-width: 128px;
+  padding: 11px 16px;
+  border-radius: 10px;
+  text-align: center;
+  background: linear-gradient(90deg, #0b7fd0, #16bdd1);
+  border: 1px solid #31dce8;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+`;
+
+export const SecondaryLink = styled.a`
+  min-width: 128px;
+  padding: 11px 16px;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(10, 28, 48, 0.86);
+  border: 1px solid rgba(85, 173, 255, 0.2);
+  color: #dce8f7;
+  text-decoration: none;
+`;
+
+export const SectionHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin: 30px 0 16px;
+
+  @media (max-width: 700px) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+`;
+
+export const SectionTitle = styled.h2`
+  color: #ffffff;
+  font-size: 26px;
+`;
+
+export const SectionNote = styled.p`
+  color: #5c91c4;
+  font-size: 12px;
+`;
+
+export const ProjectsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  @media (max-width: 980px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const ProjectCard = styled.article`
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(7, 21, 39, 0.88), rgba(4, 14, 28, 0.92));
+  border: 1px solid rgba(72, 173, 255, 0.2);
+`;
+
+export const ProjectImage = styled.div`
+  height: 190px;
+  background: linear-gradient(180deg, rgba(3, 11, 22, 0.08), rgba(3, 11, 22, 0.26)), ${({ variant }) => {
+    if (variant === "petly") return `url(${petly})`;
+    if (variant === "weather") return `url(${weather})`;
+    if (variant === "portfolio") return `url(${girl})`;
+    return `url(${taskBg})`;
+  }} center / cover no-repeat;
+`;
+
+export const CardBody = styled.div`
+  padding: 18px;
+
+  ${ProjectTitle} {
+    font-size: 22px;
+  }
 `;
