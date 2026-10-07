@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
-import bg from "../../images/Default_city_of_the_future_dark_colors_black_gray_modern_style_1_6ed9292a-2f42-4f44-bff0-27d1733ade98_1.jpg";
 import girl from "../../images/Leonardo_Diffusion_girlcat_with_headphones_and_laptop_digital_2.jpg";
 
 export const HomeBg = styled.main`
