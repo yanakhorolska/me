@@ -1,221 +1,274 @@
 import styled from "@emotion/styled";
 import bg from "../../images/Default_background_image_for_website_dark_colors_digital_lapto_3_780e4ed4-ef8b-4835-be7c-27a872eccc39_1.jpg";
-import { FiMail } from "react-icons/fi";
-import { IoIosPin } from "react-icons/io";
-import { IoIosCall } from "react-icons/io";
-import { MdAlternateEmail } from "react-icons/md";
-import { IoMdPersonAdd } from "react-icons/io";
 
-import { IoLogoLinkedin } from "react-icons/io";
-import { IoLogoGithub } from "react-icons/io";
+export const ContactsBox = styled.main`
+  min-height: 100vh;
+  background: url(${bg}) center / cover fixed;
+  color: #eef6ff;
+`;
 
-export const ContactsBox = styled.div`
-  background-image: url(${bg});
-  height: 100vh;
-  background-position: center;
-  background-size: 100vw;
-`;
-export const PageBox = styled.section`
-  padding: 150px 0px 50px;
-`;
 export const Backdrop = styled.div`
-  height: 100%;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.8) 20%,
-    rgba(0, 0, 0, 0.7) 80%
-  );
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(2, 10, 22, 0.9), rgba(2, 10, 22, 0.97));
 `;
-export const Box = styled.div`
-  background-color: rgba(60, 60, 60, 0.2);
-  box-shadow: 2px 2px 14px 5px rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  max-width: 1000px;
-  max-height: 100%;
-  margin: 0 auto 50px;
-  border-radius: 10px;
-  padding: 50px;
-  position: relative;
+
+export const PageBox = styled.section`
+  padding: 118px 0 64px;
 `;
-export const SecondBox = styled.div`
-  background-color: rgba(60, 60, 60, 0.2);
-  backdrop-filter: blur(10px);
-  box-shadow: 2px 2px 14px 5px rgba(0, 0, 0, 0.8);
-  max-width: 1000px;
-  max-height: 100%;
-  margin: 0 auto;
-  border-radius: 10px;
-  padding: 50px;
-  position: relative;
-`;
-export const StickBox = styled.div`
-  width: 5px;
-  background-color: #008b8b;
-  max-height: 100%;
-  top: 50px;
-  bottom: 50px;
-  position: absolute;
-`;
-export const BlockBox = styled.div`
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  width: 400px;
-  height: 70px;
+
+export const Hero = styled.section`
+  min-height: 320px;
   display: flex;
-  padding: 15px;
   align-items: center;
-  gap: 20px;
+  margin-bottom: 28px;
 `;
-export const SocialsBox = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+
+export const HeroText = styled.div`
+  width: min(650px, 100%);
 `;
-export const MessageBox = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 20px;
-`;
-export const MessagePart = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-`;
-export const Form = styled.form``;
-export const Input = styled.input`
-  display: block;
-  width: 400px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  padding: 10px;
-  outline: none;
-  border: none;
-  font-size: 15px;
-  color: rgba(215, 241, 244, 0.9);
-  transition: all 300ms linear;
-  &:focus,
-  :hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-`;
-export const Message = styled.textarea`
-  display: block;
-  width: 400px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  padding: 10px;
-  outline: none;
-  border: none;
-  font-size: 15px;
-  color: rgba(215, 241, 244, 0.9);
-  resize: none;
-  transition: all 300ms linear;
-  &:focus,
-  :hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-`;
-export const Label = styled.label`
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  color: rgba(215, 241, 244, 0.9);
-`;
-export const SendButton = styled.button`
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  align-items: center;
-  border-radius: 10px;
-  padding: 12px 20px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
+
+export const Eyebrow = styled.p`
+  color: #31dce8;
+  font-size: 13px;
   font-weight: 600;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #111;
-  transition: all 300ms linear;
-  &:hover {
-    background-color: #008b8b;
-  }
-`;
-export const IconSend = styled(FiMail)`
-  fill: #ffe4c4;
-  height: 25px;
-  width: 25px;
-`;
-export const IconLocation = styled(IoIosPin)`
-  fill: rgba(255, 255, 255, 0.5);
-  height: 40px;
-  width: 40px;
-  padding: 5px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 14px;
 `;
 
-export const IconEmail = styled(MdAlternateEmail)`
-  fill: rgba(255, 255, 255, 0.5);
-  height: 40px;
-  width: 40px;
-  padding: 5px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+export const Title = styled.h1`
+  font-size: clamp(58px, 8vw, 96px);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+  color: #ffffff;
 `;
 
-export const IconPhone = styled(IoIosCall)`
-  fill: rgba(255, 255, 255, 0.5);
-  height: 40px;
-  width: 40px;
-  padding: 5px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+export const Accent = styled.span`
+  color: #31dce8;
 `;
 
-export const IconSocials = styled(IoMdPersonAdd)`
-  fill: rgba(255, 255, 255, 0.5);
-  height: 40px;
-  width: 40px;
-  padding: 5px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+export const Lead = styled.p`
+  margin-top: 22px;
+  max-width: 620px;
+  color: #d8e3f2;
+  font-size: 20px;
+  line-height: 1.45;
 `;
 
-export const IconLinkedin = styled(IoLogoLinkedin)`
-  fill: rgba(215, 241, 244, 0.9);
-  height: 30px;
-  width: 30px;
-  transition: all 300ms linear;
-  &:focus,
-  :hover {
-    fill: #008b8b;
+export const Text = styled.p`
+  margin-top: 16px;
+  color: #9fb0c7;
+  line-height: 1.65;
+`;
+
+export const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 20px;
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
   }
 `;
 
-export const IconGithub = styled(IoLogoGithub)`
-  fill: rgba(215, 241, 244, 0.9);
-  height: 30px;
-  width: 30px;
-  transition: all 300ms linear;
-  &:focus,
-  :hover {
-    fill: #008b8b;
-  }
+export const Panel = styled.section`
+  padding: 24px;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(7, 21, 39, 0.88), rgba(4, 14, 28, 0.92));
+  border: 1px solid rgba(72, 173, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
 `;
-export const TextInfo = styled.a`
-  font-size: 17px;
-  color: rgba(215, 241, 244, 0.9);
+
+export const PanelTitle = styled.h2`
+  color: #ffffff;
+  font-size: 24px;
+`;
+
+export const PanelNote = styled.p`
+  margin-top: 5px;
+  color: #5c91c4;
+  font-size: 12px;
+`;
+
+export const InfoCard = styled.div`
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(10, 31, 54, 0.82);
+  border: 1px solid rgba(79, 174, 255, 0.16);
+`;
+
+export const InfoLabel = styled.p`
+  color: #5f8fc8;
+  font-size: 12px;
+  margin-bottom: 4px;
+`;
+
+export const InfoValue = styled.a`
+  color: #eef6ff;
+  font-size: 15px;
   text-decoration: none;
-  transition: all 300ms linear;
+
   &:hover {
-    color: #008b8b;
+    color: #31dce8;
   }
+`;
+
+export const SocialGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 16px;
+
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const SocialCard = styled.a`
+  padding: 16px 14px;
+  border-radius: 12px;
+  background: rgba(10, 30, 52, 0.82);
+  border: 1px solid rgba(79, 174, 255, 0.16);
+  color: #dfeaf7;
+  text-decoration: none;
+  text-align: center;
+  transition: 180ms ease;
+
+  &:hover {
+    border-color: rgba(49, 220, 232, 0.6);
+    color: #31dce8;
+    transform: translateY(-2px);
+  }
+`;
+
+export const Availability = styled.section`
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 22px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(7, 21, 39, 0.88), rgba(4, 14, 28, 0.92));
+  border: 1px solid rgba(40, 232, 195, 0.38);
+`;
+
+export const AvailabilityDot = styled.span`
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-top: 5px;
+  background: #28e8c3;
+  box-shadow: 0 0 0 6px rgba(40, 232, 195, 0.08), 0 0 18px rgba(40, 232, 195, 0.7);
+`;
+
+export const AvailabilityTitle = styled.h3`
+  color: #48edcf;
+  font-size: 18px;
+`;
+
+export const AvailabilityText = styled.p`
+  margin-top: 5px;
+  color: #91a3ba;
+  line-height: 1.5;
+  font-size: 13px;
+`;
+
+export const Form = styled.form`
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+`;
+
+export const Label = styled.label`
+  display: grid;
+  gap: 7px;
+  color: #dce7f5;
+  font-size: 13px;
+`;
+
+export const Input = styled.input`
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(89, 177, 255, 0.24);
+  outline: none;
+  background: rgba(7, 24, 44, 0.9);
+  color: #eef6ff;
+
+  &:focus {
+    border-color: rgba(49, 220, 232, 0.75);
+    box-shadow: 0 0 0 3px rgba(49, 220, 232, 0.08);
+  }
+`;
+
+export const Message = styled.textarea`
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(89, 177, 255, 0.24);
+  outline: none;
+  resize: vertical;
+  background: rgba(7, 24, 44, 0.9);
+  color: #eef6ff;
+
+  &:focus {
+    border-color: rgba(49, 220, 232, 0.75);
+    box-shadow: 0 0 0 3px rgba(49, 220, 232, 0.08);
+  }
+`;
+
+export const SendButton = styled.button`
+  min-height: 48px;
+  border-radius: 10px;
+  border: 1px solid #31dce8;
+  background: linear-gradient(90deg, #0b7fd0, #16bdd1);
+  color: #f8fdff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 24px rgba(49, 220, 232, 0.16);
+`;
+
+export const ContactLink = styled.a`
+  padding: 12px 10px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgba(79, 174, 255, 0.2);
+  background: rgba(9, 26, 46, 0.82);
+  color: #dce7f5;
+  text-decoration: none;
+
+  &:hover {
+    color: #31dce8;
+    border-color: rgba(49, 220, 232, 0.5);
+  }
+`;
+
+export const FooterCards = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 22px;
+
+  @media (max-width: 760px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const FooterCard = styled.div`
+  padding: 22px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(7, 21, 39, 0.88), rgba(4, 14, 28, 0.92));
+  border: 1px solid rgba(72, 173, 255, 0.2);
+`;
+
+export const FooterTitle = styled.h3`
+  color: #ffffff;
+  font-size: 17px;
+`;
+
+export const FooterText = styled.p`
+  margin-top: 8px;
+  color: #8ea1b9;
+  line-height: 1.55;
+  font-size: 13px;
 `;
