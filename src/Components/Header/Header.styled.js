@@ -1,95 +1,95 @@
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
-import { BsFillPersonFill, BsFillHouseDoorFill } from "react-icons/bs";
-import { RiArchiveFill } from "react-icons/ri";
-import { AiFillPhone } from "react-icons/ai";
 
 export const HeaderBox = styled.header`
   position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 30px 0px;
+  padding: 28px 0;
+
+  @media (max-width: 767px) {
+    padding: 20px 0;
+  }
 `;
 
-export const Nav = styled.div`
+export const Nav = styled.nav`
+  min-height: 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 32px;
+`;
+
+export const Brand = styled(NavLink)`
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #f4f7fb;
+  text-decoration: none;
+`;
+
+export const BrandMark = styled.span`
+  color: #67ded2;
+  font-family: "Chivo Mono", monospace;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+`;
+
+export const BrandName = styled.span`
+  font-size: 18px;
+  font-weight: 650;
+  letter-spacing: -0.03em;
 `;
 
 export const LinksList = styled.div`
   display: flex;
-  list-style: none;
-  gap: 50px;
-  font-size: 20px;
-`;
+  align-items: center;
+  gap: clamp(22px, 3vw, 42px);
 
-export const Link = styled(NavLink)`
-  font-size: 25px;
-  text-decoration: none;
-  font-weight: 400;
-  &.active {
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background-color: rgba(215, 241, 244, 0.9);
-      display: block;
-      transition: width 1s;
+  @media (max-width: 767px) {
+    gap: 16px;
+  }
+
+  @media (max-width: 620px) {
+    a:not(:first-of-type):not(:last-of-type) {
+      display: none;
     }
   }
 `;
-// export const Backdrop = styled.div`
-//   height: 100%;
-//   background-image: linear-gradient(
-//     to right,
-//     rgba(8, 11, 170, 0.5) 40%,
-//     rgba(8, 11, 170, 0.1) 60%
-//   );
-//   padding: 15px 10px;
-//   border: 1px solid rgb(8, 11, 170);
-//   border-radius: 30px;
-// `;
 
-export const LinksBox = styled.div`
-  display: block;
-  cursor: pointer;
-  color: rgba(215, 241, 244, 0.9);
+export const Link = styled(NavLink)`
   position: relative;
+  padding: 9px 0;
+  color: #9ca9bc;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 180ms ease;
+
   &::after {
-    background-color: rgba(215, 241, 244, 0.9);
     content: "";
-    display: block;
-    height: 2px;
     position: absolute;
-    width: 0;
-    transition: width 0.35s;
-  }
-  &:hover::after {
+    left: 0;
+    bottom: 3px;
     width: 100%;
+    height: 1px;
+    background: #67ded2;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 180ms ease;
   }
-`;
 
-export const IconHome = styled(BsFillHouseDoorFill)`
-  margin-right: 10px;
-  height: 20px;
-  fill: #008b8b;
-`;
+  &:hover,
+  &.active {
+    color: #f5f7fb;
+  }
 
-export const IconAbout = styled(BsFillPersonFill)`
-  margin-right: 10px;
-  height: 20px;
-  fill: #008b8b;
-`;
-
-export const IconProjects = styled(RiArchiveFill)`
-  margin-right: 10px;
-  height: 20px;
-  fill: #008b8b;
-`;
-
-export const IconContact = styled(AiFillPhone)`
-  margin-right: 10px;
-  fill: #008b8b;
-  height: 20px;
+  &:hover::after,
+  &.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
 `;
