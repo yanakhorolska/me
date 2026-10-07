@@ -1,234 +1,344 @@
 import styled from "@emotion/styled";
 import bg from "../../images/Default_background_image_for_website_dark_colors_digital_lapto_3_780e4ed4-ef8b-4835-be7c-27a872eccc39_1.jpg";
 
-export const ContactsBox = styled.main`
+export const ContactsBox = styled.main\`
   min-height: 100vh;
-  background: url(${bg}) center / cover fixed;
+  position: relative;
+  overflow: hidden;
   color: #eef6ff;
-`;
+  background:
+    linear-gradient(180deg, rgba(2, 10, 22, 0.91), rgba(2, 10, 22, 0.97)),
+    url(\${bg}) center / cover fixed no-repeat;
+\`;
 
-export const Backdrop = styled.div`
+export const Backdrop = styled.div\`
   min-height: 100vh;
-  background: linear-gradient(180deg, rgba(2, 10, 22, 0.9), rgba(2, 10, 22, 0.97));
-`;
+  background:
+    radial-gradient(circle at 74% 18%, rgba(31, 189, 255, 0.08), transparent 22%),
+    radial-gradient(circle at 14% 60%, rgba(49, 220, 232, 0.04), transparent 24%);
+\`;
 
-export const PageBox = styled.section`
-  padding: 118px 0 64px;
-`;
+export const PageBox = styled.section\`
+  padding: 108px 0 60px;
+\`;
 
-export const Hero = styled.section`
-  min-height: 320px;
+export const Hero = styled.section\`
+  position: relative;
+  min-height: 350px;
   display: flex;
   align-items: center;
-  margin-bottom: 28px;
-`;
+  margin-bottom: 26px;
+  overflow: hidden;
+  border-radius: 0 0 28px 28px;
 
-export const HeroText = styled.div`
-  width: min(650px, 100%);
-`;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 46%;
+    background:
+      linear-gradient(90deg, rgba(3, 15, 28, 0.9) 0%, rgba(3, 15, 28, 0.18) 26%, rgba(3, 15, 28, 0.08) 100%),
+      url(\${bg}) 76% center / cover no-repeat;
+    opacity: 0.88;
+    border-left: 1px solid rgba(55, 162, 237, 0.12);
+  }
 
-export const Eyebrow = styled.p`
+  &::after {
+    content: "const ideas = connect();";
+    position: absolute;
+    right: 28px;
+    top: 34px;
+    color: rgba(65, 156, 218, 0.32);
+    font-family: "Chivo Mono", monospace;
+    font-size: 11px;
+  }
+
+  @media (max-width: 820px) {
+    min-height: 300px;
+
+    &::before {
+      inset: 0;
+      opacity: 0.36;
+    }
+  }
+\`;
+
+export const HeroText = styled.div\`
+  position: relative;
+  z-index: 2;
+  width: min(620px, 56%);
+  padding-left: 24px;
+
+  @media (max-width: 820px) {
+    width: min(620px, 100%);
+    padding-right: 24px;
+  }
+\`;
+
+export const Eyebrow = styled.p\`
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: #31dce8;
   font-size: 13px;
   font-weight: 600;
-  margin-bottom: 14px;
-`;
+  margin-bottom: 12px;
 
-export const Title = styled.h1`
-  font-size: clamp(58px, 8vw, 96px);
-  line-height: 0.96;
+  &::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    border-radius: 999px;
+    background: #31dce8;
+    box-shadow: 0 0 12px rgba(49, 220, 232, 0.45);
+  }
+\`;
+
+export const Title = styled.h1\`
+  font-size: clamp(58px, 7vw, 92px);
+  line-height: 0.95;
   letter-spacing: -0.06em;
   color: #ffffff;
-`;
+\`;
 
-export const Accent = styled.span`
+export const Accent = styled.span\`
   color: #31dce8;
-`;
+\`;
 
-export const Lead = styled.p`
-  margin-top: 22px;
-  max-width: 620px;
+export const Lead = styled.p\`
+  margin-top: 18px;
+  max-width: 590px;
   color: #d8e3f2;
-  font-size: 20px;
-  line-height: 1.45;
-`;
+  font-size: 19px;
+  line-height: 1.43;
+\`;
 
-export const Text = styled.p`
-  margin-top: 16px;
+export const Text = styled.p\`
+  margin-top: 14px;
   color: #9fb0c7;
-  line-height: 1.65;
-`;
+  line-height: 1.62;
+  font-size: 14px;
+\`;
 
-export const Grid = styled.div`
+export const Grid = styled.div\`
   display: grid;
-  grid-template-columns: 0.92fr 1.08fr;
-  gap: 20px;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 18px;
   align-items: start;
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
   }
-`;
+\`;
 
-export const Panel = styled.section`
-  padding: 24px;
-  margin-bottom: 18px;
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(7, 21, 39, 0.88), rgba(4, 14, 28, 0.92));
+export const Panel = styled.section\`
+  position: relative;
+  padding: 22px;
+  margin-bottom: 16px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(7, 21, 39, 0.9), rgba(4, 14, 28, 0.94));
   border: 1px solid rgba(72, 173, 255, 0.2);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
-`;
+  box-shadow:
+    inset 0 0 24px rgba(0, 190, 255, 0.025),
+    0 18px 44px rgba(0, 0, 0, 0.22);
 
-export const PanelTitle = styled.h2`
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 48px;
+    height: 1px;
+    background: #31dce8;
+    box-shadow: 0 0 12px rgba(49, 220, 232, 0.42);
+  }
+\`;
+
+export const PanelTitle = styled.h2\`
   color: #ffffff;
-  font-size: 24px;
-`;
+  font-size: 22px;
+\`;
 
-export const PanelNote = styled.p`
+export const PanelNote = styled.p\`
+  display: flex;
+  align-items: center;
+  gap: 7px;
   margin-top: 5px;
-  color: #5c91c4;
-  font-size: 12px;
-`;
+  color: #5f8fc1;
+  font-size: 11px;
 
-export const InfoCard = styled.div`
-  margin-top: 14px;
-  padding: 16px;
-  border-radius: 12px;
-  background: rgba(10, 31, 54, 0.82);
-  border: 1px solid rgba(79, 174, 255, 0.16);
-`;
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #31dce8;
+    box-shadow: 0 0 10px rgba(49, 220, 232, 0.6);
+  }
+\`;
 
-export const InfoLabel = styled.p`
+export const InfoCard = styled.div\`
+  margin-top: 12px;
+  padding: 15px 16px;
+  border-radius: 10px;
+  background: rgba(9, 31, 54, 0.82);
+  border: 1px solid rgba(79, 174, 255, 0.17);
+  transition: border-color 180ms ease, transform 180ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    border-color: rgba(49, 220, 232, 0.34);
+  }
+\`;
+
+export const InfoLabel = styled.p\`
   color: #5f8fc8;
-  font-size: 12px;
+  font-size: 11px;
   margin-bottom: 4px;
-`;
+\`;
 
-export const InfoValue = styled.a`
+export const InfoValue = styled.a\`
   color: #eef6ff;
-  font-size: 15px;
+  font-size: 14px;
   text-decoration: none;
 
   &:hover {
     color: #31dce8;
   }
-`;
+\`;
 
-export const SocialGrid = styled.div`
+export const SocialGrid = styled.div\`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-top: 16px;
+  gap: 9px;
+  margin-top: 14px;
 
   @media (max-width: 560px) {
     grid-template-columns: 1fr;
   }
-`;
+\`;
 
-export const SocialCard = styled.a`
-  padding: 16px 14px;
-  border-radius: 12px;
+export const SocialCard = styled.a\`
+  padding: 15px 12px;
+  border-radius: 10px;
   background: rgba(10, 30, 52, 0.82);
-  border: 1px solid rgba(79, 174, 255, 0.16);
+  border: 1px solid rgba(79, 174, 255, 0.17);
   color: #dfeaf7;
   text-decoration: none;
   text-align: center;
-  transition: 180ms ease;
+  font-size: 13px;
+  transition: transform 180ms ease, border-color 180ms ease, color 180ms ease;
 
   &:hover {
-    border-color: rgba(49, 220, 232, 0.6);
+    border-color: rgba(49, 220, 232, 0.52);
     color: #31dce8;
     transform: translateY(-2px);
   }
-`;
+\`;
 
-export const Availability = styled.section`
+export const Availability = styled.section\`
   display: flex;
   gap: 14px;
   align-items: flex-start;
-  padding: 22px;
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(7, 21, 39, 0.88), rgba(4, 14, 28, 0.92));
-  border: 1px solid rgba(40, 232, 195, 0.38);
-`;
+  padding: 20px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(7, 29, 39, 0.92), rgba(4, 20, 29, 0.94));
+  border: 1px solid rgba(40, 232, 195, 0.42);
+  box-shadow: inset 0 0 24px rgba(40, 232, 195, 0.025);
+\`;
 
-export const AvailabilityDot = styled.span`
-  width: 12px;
-  height: 12px;
+export const AvailabilityDot = styled.span\`
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
   margin-top: 5px;
   background: #28e8c3;
-  box-shadow: 0 0 0 6px rgba(40, 232, 195, 0.08), 0 0 18px rgba(40, 232, 195, 0.7);
-`;
+  box-shadow: 0 0 0 6px rgba(40, 232, 195, 0.07), 0 0 16px rgba(40, 232, 195, 0.72);
+\`;
 
-export const AvailabilityTitle = styled.h3`
+export const AvailabilityTitle = styled.h3\`
   color: #48edcf;
-  font-size: 18px;
-`;
+  font-size: 17px;
+\`;
 
-export const AvailabilityText = styled.p`
+export const AvailabilityText = styled.p\`
   margin-top: 5px;
   color: #91a3ba;
   line-height: 1.5;
-  font-size: 13px;
-`;
+  font-size: 12px;
+\`;
 
-export const Form = styled.form`
+export const Form = styled.form\`
   display: grid;
-  gap: 14px;
-  margin-top: 22px;
-`;
+  gap: 13px;
+  margin-top: 20px;
+\`;
 
-export const Label = styled.label`
+export const Label = styled.label\`
   display: grid;
-  gap: 7px;
+  gap: 6px;
   color: #dce7f5;
-  font-size: 13px;
-`;
+  font-size: 12px;
+\`;
 
-export const Input = styled.input`
+export const Input = styled.input\`
   width: 100%;
-  padding: 13px 14px;
-  border-radius: 10px;
+  padding: 12px 13px;
+  border-radius: 9px;
   border: 1px solid rgba(89, 177, 255, 0.24);
   outline: none;
-  background: rgba(7, 24, 44, 0.9);
+  background: rgba(7, 24, 44, 0.92);
   color: #eef6ff;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+
+  &::placeholder {
+    color: #58708f;
+  }
 
   &:focus {
-    border-color: rgba(49, 220, 232, 0.75);
-    box-shadow: 0 0 0 3px rgba(49, 220, 232, 0.08);
+    border-color: rgba(49, 220, 232, 0.72);
+    box-shadow: 0 0 0 3px rgba(49, 220, 232, 0.07);
   }
-`;
+\`;
 
-export const Message = styled.textarea`
+export const Message = styled.textarea\`
   width: 100%;
-  padding: 13px 14px;
-  border-radius: 10px;
+  padding: 12px 13px;
+  border-radius: 9px;
   border: 1px solid rgba(89, 177, 255, 0.24);
   outline: none;
   resize: vertical;
-  background: rgba(7, 24, 44, 0.9);
+  background: rgba(7, 24, 44, 0.92);
   color: #eef6ff;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+
+  &::placeholder {
+    color: #58708f;
+  }
 
   &:focus {
-    border-color: rgba(49, 220, 232, 0.75);
-    box-shadow: 0 0 0 3px rgba(49, 220, 232, 0.08);
+    border-color: rgba(49, 220, 232, 0.72);
+    box-shadow: 0 0 0 3px rgba(49, 220, 232, 0.07);
   }
-`;
+\`;
 
-export const SendButton = styled.button`
-  min-height: 48px;
-  border-radius: 10px;
+export const SendButton = styled.button\`
+  min-height: 46px;
+  border-radius: 9px;
   border: 1px solid #31dce8;
   background: linear-gradient(90deg, #0b7fd0, #16bdd1);
   color: #f8fdff;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 0 24px rgba(49, 220, 232, 0.16);
-`;
+  box-shadow: 0 0 22px rgba(49, 220, 232, 0.16);
+  transition: transform 180ms ease, box-shadow 180ms ease;
 
-export const ContactLink = styled.a`
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 30px rgba(49, 220, 232, 0.25);
+  }
+\`;
+
+export const ContactLink = styled.a\`
   padding: 12px 10px;
   text-align: center;
   border-radius: 10px;
@@ -241,34 +351,46 @@ export const ContactLink = styled.a`
     color: #31dce8;
     border-color: rgba(49, 220, 232, 0.5);
   }
-`;
+\`;
 
-export const FooterCards = styled.div`
+export const FooterCards = styled.div\`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 22px;
+  gap: 14px;
+  margin-top: 20px;
 
   @media (max-width: 760px) {
     grid-template-columns: 1fr;
   }
-`;
+\`;
 
-export const FooterCard = styled.div`
-  padding: 22px;
-  border-radius: 16px;
-  background: linear-gradient(180deg, rgba(7, 21, 39, 0.88), rgba(4, 14, 28, 0.92));
-  border: 1px solid rgba(72, 173, 255, 0.2);
-`;
+export const FooterCard = styled.div\`
+  position: relative;
+  padding: 20px;
+  border-radius: 13px;
+  background: linear-gradient(180deg, rgba(7, 21, 39, 0.88), rgba(4, 14, 28, 0.94));
+  border: 1px solid rgba(72, 173, 255, 0.19);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
 
-export const FooterTitle = styled.h3`
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 18px;
+    width: 38px;
+    height: 1px;
+    background: #31dce8;
+  }
+\`;
+
+export const FooterTitle = styled.h3\`
   color: #ffffff;
-  font-size: 17px;
-`;
+  font-size: 16px;
+\`;
 
-export const FooterText = styled.p`
-  margin-top: 8px;
+export const FooterText = styled.p\`
+  margin-top: 7px;
   color: #8ea1b9;
   line-height: 1.55;
-  font-size: 13px;
-`;
+  font-size: 12px;
+\`;
