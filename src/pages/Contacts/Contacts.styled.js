@@ -330,11 +330,33 @@ export const SendButton = styled.button`
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 0 22px rgba(49, 220, 232, 0.16);
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
 
-  &:hover {
+  &:hover:not(:disabled) {
     transform: translateY(-1px);
     box-shadow: 0 0 30px rgba(49, 220, 232, 0.25);
+  }
+
+  &:disabled {
+    cursor: wait;
+    opacity: 0.68;
+  }
+`;
+
+export const FormStatus = styled.p`
+  margin-top: 2px;
+  padding: 10px 12px;
+  border-radius: 9px;
+  border: 1px solid rgba(40, 232, 195, 0.28);
+  background: rgba(16, 81, 69, 0.22);
+  color: #70efd4;
+  font-size: 12px;
+  line-height: 1.45;
+
+  &.error {
+    border-color: rgba(255, 108, 126, 0.3);
+    background: rgba(105, 31, 43, 0.22);
+    color: #ff9aaa;
   }
 `;
 

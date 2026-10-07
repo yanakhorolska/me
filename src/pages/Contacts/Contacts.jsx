@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ContainerBox } from "../../Components/Container/Container.styled";
 import {
   ContactsBox,
@@ -28,13 +29,50 @@ import {
   Input,
   Message,
   SendButton,
+  FormStatus,
   FooterCards,
   FooterCard,
   FooterTitle,
   FooterText,
 } from "./Contacts.styled";
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/meaeaglg";
+
 export const Contacts = () => {
+  const [submitStatus, setSubmitStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    setIsSubmitting(true);
+    setSubmitStatus("");
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      form.reset();
+      setSubmitStatus("success");
+    } catch {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <ContactsBox>
       <Backdrop>
@@ -120,27 +158,63 @@ export const Contacts = () => {
                   Have a project in mind, a collaboration idea, or a job
                   opportunity? Fill out the form below and I'll get back to you.
                 </Text>
-                <Form>
+
+                <Form onSubmit={handleSubmit}>
                   <Label>
                     Name
-                    <Input type="text" placeholder="Your name..." />
+                    <Input
+                      type="text"
+                      name="name"
+                      placeholder="Your name..."
+                      required
+                    />
                   </Label>
+
                   <Label>
                     Email
-                    <Input type="email" placeholder="your@email.com" />
+                    <Input
+                      type="email"
+                      name="email"
+                      placeholder="your@email.com"
+                      required
+                    />
                   </Label>
+
                   <Label>
                     Subject
-                    <Input type="text" placeholder="What's this about?" />
+                    <Input
+                      type="text"
+                      name="subject"
+                      placeholder="What's this about?"
+                      required
+                    />
                   </Label>
+
                   <Label>
                     Message
                     <Message
+                      name="message"
                       rows="6"
                       placeholder="Tell me about your project, idea, or opportunity..."
+                      required
                     />
                   </Label>
-                  <SendButton type="button">Send message →</SendButton>
+
+                  <SendButton type="submit" disabled={isSubmitting}>
+                    {isSubmitting ? "Sending..." : "Send message →"}
+                  </SendButton>
+
+                  {submitStatus === "success" && (
+                    <FormStatus role="status" aria-live="polite">
+                      Message sent successfully. Thank you!
+                    </FormStatus>
+                  )}
+
+                  {submitStatus === "error" && (
+                    <FormStatus className="error" role="alert">
+                      Something went wrong. Please try again or contact me by email.
+                    </FormStatus>
+                  )}
                 </Form>
               </Panel>
             </Grid>
