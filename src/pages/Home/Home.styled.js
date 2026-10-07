@@ -1,13 +1,17 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
-import girl from "../../images/Leonardo_Diffusion_girlcat_with_headphones_and_laptop_digital_2.jpg";
+import girl from "../../images/Leonardo_Diffusion_girlcat_with_headphones_and_laptop_digital_2.webp";
 
 export const HomeBg = styled.main`
   min-height: 100vh;
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 18% 24%, rgba(0, 221, 255, 0.08), transparent 25%),
+    radial-gradient(
+      circle at 18% 24%,
+      rgba(0, 221, 255, 0.08),
+      transparent 25%
+    ),
     linear-gradient(180deg, #03101d 0%, #061220 52%, #03101b 100%);
   color: #f5f8ff;
 
@@ -17,7 +21,13 @@ export const HomeBg = styled.main`
     inset: 0;
     pointer-events: none;
     background:
-      linear-gradient(90deg, rgba(3, 16, 29, 0.9) 0%, rgba(3, 16, 29, 0.68) 38%, rgba(3, 16, 29, 0.08) 68%, rgba(3, 16, 29, 0.28) 100%),
+      linear-gradient(
+        90deg,
+        rgba(3, 16, 29, 0.9) 0%,
+        rgba(3, 16, 29, 0.68) 38%,
+        rgba(3, 16, 29, 0.08) 68%,
+        rgba(3, 16, 29, 0.28) 100%
+      ),
       url(${girl}) 78% center / min(760px, 58vw) auto no-repeat;
   }
 
@@ -28,16 +38,33 @@ export const HomeBg = styled.main`
     pointer-events: none;
     opacity: 0.18;
     background:
-      linear-gradient(90deg, transparent 0 8%, rgba(var(--accent-rgb), 0.12) 8.1%, transparent 8.2%),
-      linear-gradient(0deg, transparent 0 18%, rgba(var(--accent-rgb), 0.1) 18.1%, transparent 18.2%);
-    background-size: 160px 160px, 190px 190px;
+      linear-gradient(
+        90deg,
+        transparent 0 8%,
+        rgba(var(--accent-rgb), 0.12) 8.1%,
+        transparent 8.2%
+      ),
+      linear-gradient(
+        0deg,
+        transparent 0 18%,
+        rgba(var(--accent-rgb), 0.1) 18.1%,
+        transparent 18.2%
+      );
+    background-size:
+      160px 160px,
+      190px 190px;
     mix-blend-mode: screen;
   }
 
   @media (max-width: 980px) {
     &::before {
       background:
-        linear-gradient(180deg, rgba(3, 16, 29, 0.92) 0%, rgba(3, 16, 29, 0.64) 56%, rgba(3, 16, 29, 0.84) 100%),
+        linear-gradient(
+          180deg,
+          rgba(3, 16, 29, 0.92) 0%,
+          rgba(3, 16, 29, 0.64) 56%,
+          rgba(3, 16, 29, 0.84) 100%
+        ),
         url(${girl}) center top / cover no-repeat;
       opacity: 0.62;
     }
@@ -232,5 +259,7 @@ export const StatusDot = styled.span`
   height: 8px;
   border-radius: 50%;
   background: #28e8c3;
-  box-shadow: 0 0 0 6px rgba(40, 232, 195, 0.07), 0 0 14px rgba(40, 232, 195, 0.8);
+  box-shadow:
+    0 0 0 6px rgba(40, 232, 195, 0.07),
+    0 0 14px rgba(40, 232, 195, 0.8);
 `;
