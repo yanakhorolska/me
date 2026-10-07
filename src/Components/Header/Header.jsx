@@ -1,37 +1,27 @@
 import {
   HeaderBox,
+  Brand,
+  BrandMark,
+  BrandName,
   LinksList,
   Link,
   Nav,
-  LinksBox,
-  IconHome,
-  IconAbout,
-  IconProjects,
-  IconContact,
 } from "./Header.styled.js";
 
 export const Header = () => {
   return (
     <HeaderBox>
       <Nav>
-        <LinksBox>
-          <IconHome />
-          <Link to="/">Main</Link>
-        </LinksBox>
-        <LinksList>
-          <LinksBox>
-            <IconAbout />
-            <Link to="/about">About me</Link>
-          </LinksBox>
-          <LinksBox>
-            <IconProjects />
-            <Link to="/projects">My projects</Link>
-          </LinksBox>
+        <Brand to="/">
+          <BrandMark>&lt;/&gt;</BrandMark>
+          <BrandName>Yana</BrandName>
+        </Brand>
 
-          <LinksBox>
-            <IconContact />
-            <Link to="/contacts">Contacts</Link>
-          </LinksBox>
+        <LinksList>
+          <Link to="/">Main</Link>
+          <Link to="/about">About me</Link>
+          <Link to="/projects">My projects</Link>
+          <Link to="/contacts">Contacts</Link>
         </LinksList>
       </Nav>
     </HeaderBox>
