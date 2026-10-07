@@ -292,7 +292,7 @@ export const ProjectImage = styled.div(({ variant }) => ({
 export const CardBody = styled.div`
   padding: 16px;
 
-  ${ProjectTitle} {
+  & h2 {
     font-size: 21px;
   }
 `;

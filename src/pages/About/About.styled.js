@@ -293,7 +293,7 @@ export const BottomGrid = styled.div`
     grid-template-columns: 1fr;
   }
 
-  ${SectionCard} {
+  & > section {
     margin-bottom: 0;
   }
 `;
