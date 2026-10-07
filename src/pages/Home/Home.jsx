@@ -1,52 +1,72 @@
 import {
   HomeBg,
-  TextBlock,
+  Hero,
+  Eyebrow,
   MainHeader,
-  SecondHeader,
+  Accent,
+  Role,
+  Description,
+  Actions,
+  PrimaryLink,
   ContactButton,
+  Stack,
+  StackLabel,
+  StackItems,
+  StackItem,
+  Status,
+  StatusDot,
   Backdrop,
-  Icon,
-  Span,
 } from "./Home.styled.js";
-import "../../animation.css";
 import { ContainerBox } from "../../Components/Container/Container.styled.js";
 import { ContactsModal } from "../../Components/ContactsModal/ContactsModal.jsx";
 import { useState } from "react";
-import svg from "../../images/hand-wave.svg";
 
 export const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const onModalClick = () => {
-    setIsModalOpen(true);
-  };
-  const onClose = () => {
-    setIsModalOpen(false);
-  };
+
   return (
     <HomeBg>
       <Backdrop>
         <ContainerBox>
-          <TextBlock>
-            <MainHeader>Hello</MainHeader>
-            <Icon
-              className="hand"
-              src={svg}
-              alt="hand"
-              width="40"
-              height="40"
-            />
-            <SecondHeader>Welcome to my Portfolio Website!</SecondHeader>
-            <SecondHeader>
-              I am a passionate <Span>Full-Stack Developer</Span>
-            </SecondHeader>
-            <SecondHeader>with a love for crafting</SecondHeader>
-            <SecondHeader>innovative digital solutions.</SecondHeader>
+          <Hero>
+            <Eyebrow>Full-Stack Developer</Eyebrow>
+            <MainHeader>
+              Hi, I&apos;m <Accent>Yana</Accent>
+            </MainHeader>
+            <Role>Building thoughtful digital experiences.</Role>
+            <Description>
+              I create clean, responsive interfaces and practical web applications
+              with a growing focus on full-stack development.
+            </Description>
 
-            <ContactButton onClick={onModalClick}>Contact me</ContactButton>
-          </TextBlock>
+            <Actions>
+              <PrimaryLink to="/projects">View my projects</PrimaryLink>
+              <ContactButton onClick={() => setIsModalOpen(true)}>
+                Contact me
+              </ContactButton>
+            </Actions>
+
+            <Stack>
+              <StackLabel>Core stack</StackLabel>
+              <StackItems>
+                <StackItem>React</StackItem>
+                <StackItem>Angular</StackItem>
+                <StackItem>TypeScript</StackItem>
+                <StackItem>Node.js</StackItem>
+              </StackItems>
+            </Stack>
+
+            <Status>
+              <StatusDot />
+              Open to opportunities
+            </Status>
+          </Hero>
         </ContainerBox>
       </Backdrop>
-      {isModalOpen && <ContactsModal onModal={() => onClose()} />}
+
+      {isModalOpen && (
+        <ContactsModal onModal={() => setIsModalOpen(false)} />
+      )}
     </HomeBg>
   );
 };
