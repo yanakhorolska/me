@@ -29,10 +29,9 @@ export const HomeBg = styled.main`
     pointer-events: none;
     opacity: 0.18;
     background:
-      linear-gradient(90deg, transparent 0 8%, rgba(42, 178, 255, 0.14) 8.1%, transparent 8.2%),
-      linear-gradient(0deg, transparent 0 18%, rgba(42, 178, 255, 0.12) 18.1%, transparent 18.2%),
-      url(${bg}) center / cover no-repeat;
-    background-size: 160px 160px, 190px 190px, cover;
+      linear-gradient(90deg, transparent 0 8%, rgba(var(--accent-rgb), 0.12) 8.1%, transparent 8.2%),
+      linear-gradient(0deg, transparent 0 18%, rgba(var(--accent-rgb), 0.1) 18.1%, transparent 18.2%);
+    background-size: 160px 160px, 190px 190px;
     mix-blend-mode: screen;
   }
 
@@ -81,7 +80,7 @@ export const Eyebrow = styled.p`
   align-items: center;
   gap: 11px;
   margin-bottom: 18px;
-  color: #36e2ef;
+  color: var(--accent);
   font-family: "Chivo Mono", monospace;
   font-size: 13px;
   font-weight: 600;
@@ -92,8 +91,8 @@ export const Eyebrow = styled.p`
     width: 32px;
     height: 2px;
     border-radius: 999px;
-    background: #36e2ef;
-    box-shadow: 0 0 16px rgba(54, 226, 239, 0.55);
+    background: var(--accent);
+    box-shadow: 0 0 16px rgba(var(--accent-rgb), 0.55);
   }
 `;
 
@@ -107,8 +106,8 @@ export const MainHeader = styled.h1`
 `;
 
 export const Accent = styled.span`
-  color: #2ddce9;
-  text-shadow: 0 0 24px rgba(45, 220, 233, 0.18);
+  color: var(--accent);
+  text-shadow: 0 0 24px rgba(var(--accent-rgb), 0.18);
 `;
 
 export const Role = styled.h2`
@@ -161,12 +160,12 @@ const buttonBase = `
 export const PrimaryLink = styled(Link)`
   ${buttonBase}
   color: #061119;
-  background: linear-gradient(90deg, #31dce8, #31bff1);
-  border: 1px solid #4be8f3;
-  box-shadow: 0 0 24px rgba(49, 220, 232, 0.22);
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 24px rgba(var(--accent-rgb), 0.22);
 
   &:hover {
-    box-shadow: 0 0 34px rgba(49, 220, 232, 0.34);
+    box-shadow: 0 0 34px rgba(var(--accent-rgb), 0.34);
   }
 `;
 
@@ -177,7 +176,7 @@ export const ContactLink = styled(Link)`
   border: 1px solid rgba(141, 184, 224, 0.26);
 
   &:hover {
-    border-color: rgba(49, 220, 232, 0.5);
+    border-color: rgba(var(--accent-rgb), 0.5);
     background: rgba(12, 45, 62, 0.74);
   }
 `;

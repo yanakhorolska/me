@@ -3,6 +3,10 @@
 :root {
   color-scheme: dark;
   background: #050812;
+  --accent: #31dce8;
+  --accent-2: #31bff1;
+  --accent-deep: #0b7fd0;
+  --accent-rgb: 49, 220, 232;
 }
 
 html {
@@ -20,8 +24,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+}
 
-  cursor: url("./images/cursor.png"), auto;
+body,
+a,
+button,
+input,
+textarea,
+select,
+label,
+[role="button"] {
+  cursor: url("./images/cursor.png") 4 4, auto !important;
 }
 
 body::-webkit-scrollbar {
@@ -34,7 +47,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #2f817c;
+  background-color: var(--accent-deep);
   border-radius: 20px;
 }
 
@@ -43,7 +56,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 ::selection {
-  background: rgba(103, 222, 210, 0.25);
+  background: rgba(var(--accent-rgb), 0.25);
   color: #ffffff;
 }
 
@@ -83,4 +96,43 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+main {
+  animation: pageReveal 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.page-fallback {
+  min-height: 100vh;
+  background: #03101d;
+}
+
+@keyframes pageReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  main {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

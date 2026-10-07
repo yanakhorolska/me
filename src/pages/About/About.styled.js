@@ -9,7 +9,7 @@ export const AboutBox = styled.main`
   color: #eef6ff;
   background:
     linear-gradient(180deg, rgba(2, 10, 22, 0.94), rgba(2, 10, 22, 0.985)),
-    url(${bg}) center / cover fixed no-repeat;
+    url(${bg}) center / cover no-repeat;
 `;
 
 export const Backdrop = styled.div`
@@ -82,7 +82,7 @@ export const Eyebrow = styled.p`
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: #32ddea;
+  color: var(--accent);
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 14px;
@@ -91,9 +91,9 @@ export const Eyebrow = styled.p`
     content: "";
     width: 28px;
     height: 2px;
-    background: #32ddea;
+    background: var(--accent);
     border-radius: 999px;
-    box-shadow: 0 0 12px rgba(50, 221, 234, 0.45);
+    box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.45);
   }
 `;
 
@@ -105,7 +105,7 @@ export const Title = styled.h1`
 `;
 
 export const Accent = styled.span`
-  color: #32ddea;
+  color: var(--accent);
 `;
 
 export const Role = styled.h2`
@@ -178,8 +178,8 @@ export const SectionCard = styled.section`
     left: 22px;
     width: 54px;
     height: 1px;
-    background: #31dce8;
-    box-shadow: 0 0 12px rgba(49, 220, 232, 0.42);
+    background: var(--accent);
+    box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.42);
   }
 `;
 
@@ -214,8 +214,8 @@ export const SectionNote = styled.p`
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #31dce8;
-    box-shadow: 0 0 10px rgba(49, 220, 232, 0.6);
+    background: var(--accent);
+    box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.6);
   }
 `;
 
@@ -264,7 +264,7 @@ export const SkillItem = styled.span`
 
   &:hover {
     transform: translateY(-1px);
-    border-color: rgba(49, 220, 232, 0.38);
+    border-color: rgba(var(--accent-rgb), 0.38);
   }
 `;
 

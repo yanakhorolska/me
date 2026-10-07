@@ -8,14 +8,14 @@ export const ContactsBox = styled.main`
   color: #eef6ff;
   background:
     linear-gradient(180deg, rgba(2, 10, 22, 0.91), rgba(2, 10, 22, 0.97)),
-    url(${bg}) center / cover fixed no-repeat;
+    url(${bg}) center / cover no-repeat;
 `;
 
 export const Backdrop = styled.div`
   min-height: 100vh;
   background:
     radial-gradient(circle at 74% 18%, rgba(31, 189, 255, 0.08), transparent 22%),
-    radial-gradient(circle at 14% 60%, rgba(49, 220, 232, 0.04), transparent 24%);
+    radial-gradient(circle at 14% 60%, rgba(var(--accent-rgb), 0.04), transparent 24%);
 `;
 
 export const PageBox = styled.section`
@@ -78,7 +78,7 @@ export const Eyebrow = styled.p`
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: #31dce8;
+  color: var(--accent);
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 12px;
@@ -88,8 +88,8 @@ export const Eyebrow = styled.p`
     width: 28px;
     height: 2px;
     border-radius: 999px;
-    background: #31dce8;
-    box-shadow: 0 0 12px rgba(49, 220, 232, 0.45);
+    background: var(--accent);
+    box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.45);
   }
 `;
 
@@ -101,7 +101,7 @@ export const Title = styled.h1`
 `;
 
 export const Accent = styled.span`
-  color: #31dce8;
+  color: var(--accent);
 `;
 
 export const Lead = styled.p`
@@ -148,8 +148,8 @@ export const Panel = styled.section`
     left: 20px;
     width: 48px;
     height: 1px;
-    background: #31dce8;
-    box-shadow: 0 0 12px rgba(49, 220, 232, 0.42);
+    background: var(--accent);
+    box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.42);
   }
 `;
 
@@ -171,8 +171,8 @@ export const PanelNote = styled.p`
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #31dce8;
-    box-shadow: 0 0 10px rgba(49, 220, 232, 0.6);
+    background: var(--accent);
+    box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.6);
   }
 `;
 
@@ -186,7 +186,7 @@ export const InfoCard = styled.div`
 
   &:hover {
     transform: translateY(-1px);
-    border-color: rgba(49, 220, 232, 0.34);
+    border-color: rgba(var(--accent-rgb), 0.34);
   }
 `;
 
@@ -202,7 +202,7 @@ export const InfoValue = styled.a`
   text-decoration: none;
 
   &:hover {
-    color: #31dce8;
+    color: var(--accent);
   }
 `;
 
@@ -229,8 +229,8 @@ export const SocialCard = styled.a`
   transition: transform 180ms ease, border-color 180ms ease, color 180ms ease;
 
   &:hover {
-    border-color: rgba(49, 220, 232, 0.52);
-    color: #31dce8;
+    border-color: rgba(var(--accent-rgb), 0.52);
+    color: var(--accent);
     transform: translateY(-2px);
   }
 `;
@@ -295,8 +295,8 @@ export const Input = styled.input`
   }
 
   &:focus {
-    border-color: rgba(49, 220, 232, 0.72);
-    box-shadow: 0 0 0 3px rgba(49, 220, 232, 0.07);
+    border-color: rgba(var(--accent-rgb), 0.72);
+    box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.07);
   }
 `;
 
@@ -316,25 +316,25 @@ export const Message = styled.textarea`
   }
 
   &:focus {
-    border-color: rgba(49, 220, 232, 0.72);
-    box-shadow: 0 0 0 3px rgba(49, 220, 232, 0.07);
+    border-color: rgba(var(--accent-rgb), 0.72);
+    box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.07);
   }
 `;
 
 export const SendButton = styled.button`
   min-height: 46px;
   border-radius: 9px;
-  border: 1px solid #31dce8;
-  background: linear-gradient(90deg, #0b7fd0, #16bdd1);
+  border: 1px solid var(--accent);
+  background: linear-gradient(90deg, var(--accent-deep), var(--accent));
   color: #f8fdff;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 0 22px rgba(49, 220, 232, 0.16);
+  box-shadow: 0 0 22px rgba(var(--accent-rgb), 0.16);
   transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
 
   &:hover:not(:disabled) {
     transform: translateY(-1px);
-    box-shadow: 0 0 30px rgba(49, 220, 232, 0.25);
+    box-shadow: 0 0 30px rgba(var(--accent-rgb), 0.25);
   }
 
   &:disabled {
@@ -370,8 +370,8 @@ export const ContactLink = styled.a`
   text-decoration: none;
 
   &:hover {
-    color: #31dce8;
-    border-color: rgba(49, 220, 232, 0.5);
+    color: var(--accent);
+    border-color: rgba(var(--accent-rgb), 0.5);
   }
 `;
 
@@ -401,7 +401,7 @@ export const FooterCard = styled.div`
     left: 18px;
     width: 38px;
     height: 1px;
-    background: #31dce8;
+    background: var(--accent);
   }
 `;
 

@@ -33,12 +33,12 @@ export const Brand = styled(NavLink)`
 `;
 
 export const BrandMark = styled.span`
-  color: #31dce8;
+  color: var(--accent);
   font-family: "Chivo Mono", monospace;
   font-size: 22px;
   font-weight: 700;
   letter-spacing: -0.08em;
-  text-shadow: 0 0 16px rgba(49, 220, 232, 0.36);
+  text-shadow: 0 0 16px rgba(var(--accent-rgb), 0.36);
 `;
 
 export const BrandName = styled.span`
@@ -80,8 +80,8 @@ export const Link = styled(NavLink)`
     width: 100%;
     height: 2px;
     border-radius: 999px;
-    background: #31dce8;
-    box-shadow: 0 0 12px rgba(49, 220, 232, 0.55);
+    background: var(--accent);
+    box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.55);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 180ms ease;
@@ -89,12 +89,55 @@ export const Link = styled(NavLink)`
 
   &:hover,
   &.active {
-    color: #42e1ec;
+    color: var(--accent);
   }
 
   &:hover::after,
   &.active::after {
     transform: scaleX(1);
     transform-origin: left;
+  }
+`;
+
+export const NavRight = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  @media (max-width: 760px) {
+    gap: 10px;
+  }
+`;
+
+export const ThemePicker = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(91, 163, 226, 0.16);
+  background: rgba(6, 21, 38, 0.72);
+
+  @media (max-width: 620px) {
+    display: none;
+  }
+`;
+
+export const ThemeDot = styled.button`
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: ${({ $color }) => $color};
+  box-shadow:
+    0 0 0 ${({ $active }) => ($active ? "2px" : "0")} rgba(255, 255, 255, 0.72),
+    0 0 10px ${({ $color }) => $color};
+  opacity: ${({ $active }) => ($active ? 1 : 0.62)};
+  transition: transform 160ms ease, opacity 160ms ease, box-shadow 160ms ease;
+
+  &:hover {
+    transform: scale(1.18);
+    opacity: 1;
   }
 `;

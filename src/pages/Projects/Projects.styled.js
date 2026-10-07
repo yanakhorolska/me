@@ -12,14 +12,14 @@ export const ProjectsBox = styled.main`
   color: #eef6ff;
   background:
     linear-gradient(180deg, rgba(2, 10, 22, 0.94), rgba(2, 10, 22, 0.985)),
-    url(${bg}) center / cover fixed no-repeat;
+    url(${bg}) center / cover no-repeat;
 `;
 
 export const Backdrop = styled.div`
   min-height: 100vh;
   background:
     radial-gradient(circle at 68% 10%, rgba(42, 153, 255, 0.075), transparent 22%),
-    radial-gradient(circle at 20% 62%, rgba(49, 220, 232, 0.045), transparent 24%);
+    radial-gradient(circle at 20% 62%, rgba(var(--accent-rgb), 0.045), transparent 24%);
 `;
 
 export const PageBox = styled.section`
@@ -30,7 +30,7 @@ export const Eyebrow = styled.p`
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: #31dce8;
+  color: var(--accent);
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -40,8 +40,8 @@ export const Eyebrow = styled.p`
     width: 28px;
     height: 2px;
     border-radius: 999px;
-    background: #31dce8;
-    box-shadow: 0 0 12px rgba(49, 220, 232, 0.45);
+    background: var(--accent);
+    box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.45);
   }
 `;
 
@@ -53,7 +53,7 @@ export const PageTitle = styled.h1`
 `;
 
 export const Accent = styled.span`
-  color: #31dce8;
+  color: var(--accent);
 `;
 
 export const Intro = styled.p`
@@ -103,9 +103,9 @@ export const Badge = styled.span`
   gap: 7px;
   padding: 6px 10px;
   border-radius: 999px;
-  color: #52e7f1;
-  background: rgba(49, 220, 232, 0.08);
-  border: 1px solid rgba(49, 220, 232, 0.3);
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.08);
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
   font-size: 11px;
   margin-bottom: 14px;
 
@@ -163,9 +163,9 @@ export const PrimaryLink = styled.a`
   padding: 10px 15px;
   border-radius: 9px;
   text-align: center;
-  background: linear-gradient(90deg, #0c7fcc, #16bfd1);
-  border: 1px solid #31dce8;
-  box-shadow: 0 0 20px rgba(49, 220, 232, 0.14);
+  background: linear-gradient(90deg, var(--accent-deep), var(--accent));
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.14);
   color: #ffffff;
   font-size: 13px;
   font-weight: 600;
@@ -174,7 +174,7 @@ export const PrimaryLink = styled.a`
 
   &:hover {
     transform: translateY(-1px);
-    box-shadow: 0 0 28px rgba(49, 220, 232, 0.24);
+    box-shadow: 0 0 28px rgba(var(--accent-rgb), 0.24);
   }
 `;
 
@@ -191,8 +191,8 @@ export const SecondaryLink = styled.a`
   transition: border-color 180ms ease, color 180ms ease;
 
   &:hover {
-    color: #31dce8;
-    border-color: rgba(49, 220, 232, 0.42);
+    color: var(--accent);
+    border-color: rgba(var(--accent-rgb), 0.42);
   }
 `;
 
@@ -221,8 +221,8 @@ export const SectionTitle = styled.h2`
     width: 28px;
     height: 2px;
     border-radius: 999px;
-    background: #31dce8;
-    box-shadow: 0 0 10px rgba(49, 220, 232, 0.42);
+    background: var(--accent);
+    box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.42);
   }
 `;
 
@@ -238,8 +238,8 @@ export const SectionNote = styled.p`
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #31dce8;
-    box-shadow: 0 0 10px rgba(49, 220, 232, 0.6);
+    background: var(--accent);
+    box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.6);
   }
 `;
 
@@ -267,7 +267,7 @@ export const ProjectCard = styled.article`
 
   &:hover {
     transform: translateY(-3px);
-    border-color: rgba(49, 220, 232, 0.36);
+    border-color: rgba(var(--accent-rgb), 0.36);
   }
 `;
 
