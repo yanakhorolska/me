@@ -123,7 +123,7 @@ export const PrimaryLink = styled(Link)`
   }
 `;
 
-export const ContactButton = styled.button`
+export const ContactLink = styled(Link)`
   ${buttonBase}
   background: rgba(255, 255, 255, 0.035);
   color: #e9edf4;
