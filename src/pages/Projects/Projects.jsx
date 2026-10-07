@@ -3,18 +3,63 @@ import {
   ProjectsBox,
   Backdrop,
   PageBox,
-  ProjectCard,
-  ProjectDescr,
+  Eyebrow,
+  PageTitle,
+  Accent,
+  Intro,
+  FeaturedCard,
+  FeaturedImage,
+  FeaturedContent,
+  Badge,
   ProjectTitle,
+  ProjectSubtitle,
   ProjectText,
-  ProjectLink,
-  ProjectLinkBox,
-  ProjectPetlyImgBox,
-  ProjectWeatherImgBox,
-  IconLink,
-  BackdropImg,
-  MoreButton,
+  Tags,
+  Tag,
+  Actions,
+  PrimaryLink,
+  SecondaryLink,
+  SectionHeader,
+  SectionTitle,
+  SectionNote,
+  ProjectsGrid,
+  ProjectCard,
+  ProjectImage,
+  CardBody,
 } from "./Projects.styled";
+
+const projects = [
+  {
+    title: "Petly",
+    description: "Full-stack pet adoption platform created as a team project with a modern and user-friendly interface.",
+    image: "petly",
+    tags: ["React", "Redux", "Node.js", "MongoDB", "REST API"],
+    demo: "https://pets-front-end.vercel.app/",
+    github: "https://github.com/yanakhorolska",
+  },
+  {
+    title: "Weather App",
+    description: "A weather application with real-time forecasts, location search, and a clean responsive interface.",
+    image: "weather",
+    tags: ["React", "API", "CSS", "JavaScript"],
+    demo: "https://yanakhorolska.github.io/weather--app/",
+    github: "https://github.com/yanakhorolska",
+  },
+  {
+    title: "Weekendly",
+    description: "A project for planning or discovering weekend activities with a practical, user-friendly interface.",
+    image: "weekendly",
+    tags: ["React", "Tailwind", "Node.js", "REST API"],
+    github: "https://github.com/yanakhorolska/Weekendly-App",
+  },
+  {
+    title: "Portfolio Website",
+    description: "Personal portfolio website presenting skills, projects, and developer growth in a clear way.",
+    image: "portfolio",
+    tags: ["React", "Responsive Design", "Vercel"],
+    github: "https://github.com/yanakhorolska/me",
+  },
+];
 
 export const Projects = () => {
   return (
@@ -22,77 +67,54 @@ export const Projects = () => {
       <Backdrop>
         <PageBox>
           <ContainerBox>
-            <ProjectCard>
-              <MoreButton>+</MoreButton>
+            <Eyebrow>Portfolio</Eyebrow>
+            <PageTitle>My <Accent>Projects</Accent></PageTitle>
+            <Intro>
+              Selected projects I&apos;ve built while learning and growing as a front-end and full-stack developer.
+            </Intro>
 
-              <ProjectPetlyImgBox>
-                <BackdropImg />
-              </ProjectPetlyImgBox>
-
-              <ProjectDescr>
-                <ProjectTitle>Petly</ProjectTitle>
+            <FeaturedCard>
+              <FeaturedImage />
+              <FeaturedContent>
+                <Badge>Featured Project</Badge>
+                <ProjectTitle>TaskFlow</ProjectTitle>
+                <ProjectSubtitle>Angular Task Manager</ProjectSubtitle>
                 <ProjectText>
-                  As an accomplished Full-Stack Developer and former Team Lead,
-                  I'm excited to present a comprehensive pet adoption platform
-                  that I had the honor of leading during an advanced programming
-                  course. This project serves as the crowning achievement of my
-                  coding journey, highlighting my expertise in crafting
-                  innovative digital solutions.
+                  A task management application for organizing daily work, tracking progress,
+                  and practicing modern Angular architecture.
                 </ProjectText>
-                <ProjectLinkBox>
-                  <IconLink />
-                  <ProjectLink
-                    target="_blank"
-                    href="https://pets-front-end.vercel.app/"
-                  >
-                    https://pets-front-end.vercel.app/
-                  </ProjectLink>
-                </ProjectLinkBox>
-                <ProjectLinkBox>
-                  <IconLink />
-                  <ProjectLink
-                    target="_blank"
-                    href="https://pets-back-end.vercel.app/"
-                  >
-                    https://pets-back-end.vercel.app/
-                  </ProjectLink>
-                </ProjectLinkBox>
-              </ProjectDescr>
-            </ProjectCard>
-            <ProjectCard>
-              <MoreButton>+</MoreButton>
+                <Tags>
+                  {["Angular", "TypeScript", "RxJS", "Signals", "SCSS", "REST API"].map((tag) => <Tag key={tag}>{tag}</Tag>)}
+                </Tags>
+                <Actions>
+                  <PrimaryLink href="https://github.com/yanakhorolska/task-flow" target="_blank" rel="noreferrer">GitHub</PrimaryLink>
+                </Actions>
+              </FeaturedContent>
+            </FeaturedCard>
 
-              <ProjectWeatherImgBox>
-                <BackdropImg />
-              </ProjectWeatherImgBox>
+            <SectionHeader>
+              <SectionTitle>More Projects</SectionTitle>
+              <SectionNote>Exploring ideas, building solutions, and learning something new</SectionNote>
+            </SectionHeader>
 
-              <ProjectDescr>
-                <ProjectTitle>WeatherApp</ProjectTitle>
-                <ProjectText>
-                  This application is my personal project, developed entirely by
-                  me. It showcases my web development skills and demonstrates my
-                  ability to create valuable interactive solutions. The app
-                  enables users to receive real-time weather updates for any
-                  chosen location, highlighting my proficiency in API
-                  integration. Additionally, users can access short-term weather
-                  forecasts, enhancing daily planning efficiency.
-                </ProjectText>
-
-                <ProjectLinkBox>
-                  <IconLink />
-                  <ProjectLink
-                    target="_blank"
-                    href="https://yanakhorolska.github.io/weather--app/"
-                  >
-                    https://yanakhorolska.github.io/weather--app/
-                  </ProjectLink>
-                </ProjectLinkBox>
-              </ProjectDescr>
-            </ProjectCard>
-            <ProjectCard></ProjectCard>
-            <ProjectCard></ProjectCard>
-            <ProjectCard></ProjectCard>
-            <ProjectCard></ProjectCard>
+            <ProjectsGrid>
+              {projects.map((project) => (
+                <ProjectCard key={project.title}>
+                  <ProjectImage variant={project.image} />
+                  <CardBody>
+                    <ProjectTitle>{project.title}</ProjectTitle>
+                    <ProjectText>{project.description}</ProjectText>
+                    <Tags>
+                      {project.tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}
+                    </Tags>
+                    <Actions>
+                      {project.demo && <PrimaryLink href={project.demo} target="_blank" rel="noreferrer">Live Demo</PrimaryLink>}
+                      <SecondaryLink href={project.github} target="_blank" rel="noreferrer">GitHub</SecondaryLink>
+                    </Actions>
+                  </CardBody>
+                </ProjectCard>
+              ))}
+            </ProjectsGrid>
           </ContainerBox>
         </PageBox>
       </Backdrop>
