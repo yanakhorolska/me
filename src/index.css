@@ -20,6 +20,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+
+  cursor: url("./images/cursor.png"), auto;
 }
 
 body::-webkit-scrollbar {
