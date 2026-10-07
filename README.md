@@ -1,6 +1,10 @@
-# Yana — Developer Portfolio
+<img width="1346" height="900" alt="view" src="https://github.com/user-attachments/assets/e0dc1aa8-54a6-4c77-b2a7-b6688e65ae77" />
 
-Personal portfolio website for **Yana Khorolska**, built as a React single-page application and designed to present my projects, technical skills, current learning areas, languages, interests, and contact information.
+
+
+# Developer Portfolio
+
+Personal portfolio website, built as a React single-page application and designed to present my projects, technical skills, current learning areas, languages, interests, and contact information.
 
 The site uses a dark developer-focused visual style with a customizable accent color, responsive layouts, lazy-loaded pages, a custom cursor, subtle motion, project cards, and a working contact form.
 
