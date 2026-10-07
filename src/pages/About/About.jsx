@@ -3,18 +3,53 @@ import {
   AboutBox,
   Backdrop,
   PageBox,
-  Box,
-  IntroductionBox,
-  IntroductionText,
-  IntroductionSpan,
-  IntroductionDescribe,
-  StackBox,
-  StackItem,
-  IntroductionTitle,
-  IntroductionImg,
-  StackTitle,
-  StackItemTitle,
+  IntroGrid,
+  Portrait,
+  IntroContent,
+  Eyebrow,
+  Title,
+  Accent,
+  Role,
+  Text,
+  Traits,
+  TraitCard,
+  TraitTitle,
+  TraitText,
+  SectionCard,
+  SectionHeader,
+  SectionTitle,
+  SectionNote,
+  SkillsGrid,
+  SkillGroup,
+  SkillGroupTitle,
+  SkillList,
+  SkillItem,
+  SoftSkills,
+  SoftSkill,
+  BottomGrid,
+  FocusItem,
+  FocusTitle,
+  FocusText,
 } from "./About.styled";
+
+const technicalSkills = [
+  { title: "Frontend", items: ["HTML5", "CSS3", "SCSS/SASS", "Tailwind CSS", "Material UI", "JavaScript", "TypeScript", "React"] },
+  { title: "State & Data", items: ["Redux Toolkit", "React Query", "RxJS", "NgRx", "REST API"] },
+  { title: "Backend", items: ["Node.js", "Express.js", "MongoDB"] },
+  { title: "Tools", items: ["Git", "GitHub", "VS Code", "Postman", "Figma", "Vercel"] },
+];
+
+const softSkills = [
+  "Problem Solving",
+  "Communication",
+  "Teamwork",
+  "Adaptability",
+  "Fast Learning",
+  "Attention to Detail",
+  "Creativity",
+  "Empathy",
+  "Time Management",
+];
 
 export const About = () => {
   return (
@@ -22,87 +57,78 @@ export const About = () => {
       <Backdrop>
         <PageBox>
           <ContainerBox>
-            <Box>
-              <IntroductionBox>
-                <IntroductionImg></IntroductionImg>
-                <IntroductionDescribe>
-                  <IntroductionTitle>Who am i?</IntroductionTitle>
-                  <IntroductionText>
-                    Hello, I'm Yana, a passionate and dedicated{" "}
-                    <IntroductionSpan>full-stack developer</IntroductionSpan>{" "}
-                    with a flair for creating immersive digital experiences.
-                    With a blend of technical expertise and creative
-                    problem-solving, I craft solutions that seamlessly integrate
-                    front-end and back-end functionalities. My journey in the
-                    world of development has been an exciting exploration of the
-                    ever-evolving landscape of technologies.
-                  </IntroductionText>
-                  <br />
-                  <IntroductionText>
-                    An enthusiastic developer with a knack for rapid learning
-                    and adaptability. Proven ability to quickly grasp new
-                    technologies and concepts, translating them into effective
-                    solutions. Strong interpersonal skills, including effective
-                    <IntroductionSpan> communication</IntroductionSpan>,{" "}
-                    <IntroductionSpan>teamwork</IntroductionSpan>, and{" "}
-                    <IntroductionSpan>
-                      creative problem-solving
-                    </IntroductionSpan>
-                    . Committed to continuous growth and contributing to dynamic
-                    development projects.
-                  </IntroductionText>
-                  <IntroductionText></IntroductionText>
-                </IntroductionDescribe>
-              </IntroductionBox>
-              <StackBox>
-                <StackTitle>My technology stack</StackTitle>
-                <StackItem>
-                  <StackItemTitle>HTML</StackItemTitle>
-                </StackItem>
-                <StackItem>
-                  <StackItemTitle>CSS</StackItemTitle>
-                </StackItem>
-                <StackItem>
-                  <StackItemTitle>JS</StackItemTitle>
-                </StackItem>
-                <StackItem>
-                  <StackItemTitle>React.js</StackItemTitle>
-                </StackItem>
-                <StackItem>
-                  <StackItemTitle>Node.js</StackItemTitle>
-                </StackItem>
-                <StackItem>
-                  <StackItemTitle>Express.js</StackItemTitle>
-                </StackItem>
-                <StackItem>
-                  <StackItemTitle>Vercel</StackItemTitle>
-                </StackItem>
-                <StackItem>
-                  <StackItemTitle>MongoDb</StackItemTitle>
-                </StackItem>
-                <StackItem>
-                  <StackItemTitle>TailwindCSS</StackItemTitle>
-                </StackItem>
-                <StackItem>
-                  <StackItemTitle>Figma</StackItemTitle>
-                </StackItem>
-                <StackItem>
-                  <StackItemTitle>Git</StackItemTitle>
-                </StackItem>
-                <StackItem>
-                  <StackItemTitle>VS Code</StackItemTitle>
-                </StackItem>
-                <StackItem>
-                  <StackItemTitle>Redux Toolkit</StackItemTitle>
-                </StackItem>
-                <StackItem>
-                  <StackItemTitle>React Query</StackItemTitle>
-                </StackItem>
-                <StackItem>
-                  <StackItemTitle>Sass</StackItemTitle>
-                </StackItem>
-              </StackBox>
-            </Box>
+            <IntroGrid>
+              <Portrait />
+              <IntroContent>
+                <Eyebrow>About Me</Eyebrow>
+                <Title>Hi, I&apos;m <Accent>Yana</Accent></Title>
+                <Role>Front-End / Full-Stack Developer</Role>
+                <Text>
+                  I&apos;m a developer focused on building clean, user-friendly web applications.
+                  I enjoy turning ideas into practical digital products and continuously growing
+                  my skills in modern frontend and backend technologies.
+                </Text>
+                <Text>
+                  I&apos;m curious by nature, always eager to learn new things, and I love
+                  collaborating with people to create meaningful and impactful projects.
+                </Text>
+                <Traits>
+                  <TraitCard><div><TraitTitle>Clean Code</TraitTitle><TraitText>Always learning</TraitText></div></TraitCard>
+                  <TraitCard><div><TraitTitle>Creative Mind</TraitTitle><TraitText>Turning ideas into reality</TraitText></div></TraitCard>
+                  <TraitCard><div><TraitTitle>Team Player</TraitTitle><TraitText>Open to collaboration</TraitText></div></TraitCard>
+                </Traits>
+              </IntroContent>
+            </IntroGrid>
+
+            <SectionCard>
+              <SectionHeader>
+                <SectionTitle>Technical Skills</SectionTitle>
+                <SectionNote>Technologies I work with and enjoy using</SectionNote>
+              </SectionHeader>
+              <SkillsGrid>
+                {technicalSkills.map((group) => (
+                  <SkillGroup key={group.title}>
+                    <SkillGroupTitle>{group.title}</SkillGroupTitle>
+                    <SkillList>
+                      {group.items.map((item) => <SkillItem key={item}>{item}</SkillItem>)}
+                    </SkillList>
+                  </SkillGroup>
+                ))}
+              </SkillsGrid>
+            </SectionCard>
+
+            <SectionCard>
+              <SectionHeader>
+                <SectionTitle>Soft Skills</SectionTitle>
+                <SectionNote>What helps me work and grow effectively</SectionNote>
+              </SectionHeader>
+              <SoftSkills>
+                {softSkills.map((skill) => <SoftSkill key={skill}>{skill}</SoftSkill>)}
+              </SoftSkills>
+            </SectionCard>
+
+            <BottomGrid>
+              <SectionCard>
+                <SectionHeader>
+                  <SectionTitle>Interests</SectionTitle>
+                  <SectionNote>Things that inspire me</SectionNote>
+                </SectionHeader>
+                <SoftSkills>
+                  {["Web Development","UI/UX Design","Learning English","Digital Creativity","Books","Cozy Creative Projects","Technology Trends"].map((item) => <SoftSkill key={item}>{item}</SoftSkill>)}
+                </SoftSkills>
+              </SectionCard>
+
+              <SectionCard>
+                <SectionHeader>
+                  <SectionTitle>Currently Growing In</SectionTitle>
+                  <SectionNote>Areas I&apos;m focusing on now</SectionNote>
+                </SectionHeader>
+                <FocusItem><FocusTitle>Angular</FocusTitle><FocusText>Deepening my knowledge and building real projects</FocusText></FocusItem>
+                <FocusItem><FocusTitle>Node.js</FocusTitle><FocusText>Exploring backend development and building APIs</FocusText></FocusItem>
+                <FocusItem><FocusTitle>Full-Stack Development</FocusTitle><FocusText>Combining frontend and backend skills</FocusText></FocusItem>
+                <FocusItem><FocusTitle>English for IT</FocusTitle><FocusText>Improving technical vocabulary and communication skills</FocusText></FocusItem>
+              </SectionCard>
+            </BottomGrid>
           </ContainerBox>
         </PageBox>
       </Backdrop>
