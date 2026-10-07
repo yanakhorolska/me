@@ -8,7 +8,7 @@ import {
   Description,
   Actions,
   PrimaryLink,
-  ContactButton,
+  ContactLink,
   Stack,
   StackLabel,
   StackItems,
@@ -18,32 +18,35 @@ import {
   Backdrop,
 } from "./Home.styled.js";
 import { ContainerBox } from "../../Components/Container/Container.styled.js";
-import { ContactsModal } from "../../Components/ContactsModal/ContactsModal.jsx";
-import { useState } from "react";
 
 export const Home = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
     <HomeBg>
       <Backdrop>
         <ContainerBox>
           <Hero>
-            <Eyebrow>Full-Stack Developer</Eyebrow>
+            <Eyebrow>Welcome</Eyebrow>
             <MainHeader>
               Hi, I&apos;m <Accent>Yana</Accent>
             </MainHeader>
-            <Role>Building thoughtful digital experiences.</Role>
+            <Role>Front-End / Full-Stack Developer</Role>
             <Description>
-              I create clean, responsive interfaces and practical web applications
-              with a growing focus on full-stack development.
+              I build clean, user-friendly web applications with a love for turning
+              ideas into practical digital products.
             </Description>
+            <Description>
+              I&apos;m always eager to learn new technologies and create meaningful
+              solutions that make an impact.
+            </Description>
+
+            <Status>
+              <StatusDot />
+              Open to opportunities
+            </Status>
 
             <Actions>
               <PrimaryLink to="/projects">View my projects</PrimaryLink>
-              <ContactButton onClick={() => setIsModalOpen(true)}>
-                Contact me
-              </ContactButton>
+              <ContactLink to="/contacts">Contact me</ContactLink>
             </Actions>
 
             <Stack>
@@ -55,18 +58,9 @@ export const Home = () => {
                 <StackItem>Node.js</StackItem>
               </StackItems>
             </Stack>
-
-            <Status>
-              <StatusDot />
-              Open to opportunities
-            </Status>
           </Hero>
         </ContainerBox>
       </Backdrop>
-
-      {isModalOpen && (
-        <ContactsModal onModal={() => setIsModalOpen(false)} />
-      )}
     </HomeBg>
   );
 };
