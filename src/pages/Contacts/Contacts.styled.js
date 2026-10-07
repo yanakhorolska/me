@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import bg from "../../images/Default_background_image_for_website_dark_colors_digital_lapto_3_780e4ed4-ef8b-4835-be7c-27a872eccc39_1.jpg";
+import bg from "../../images/Default_background_image_for_website_dark_colors_digital_lapto_3_780e4ed4-ef8b-4835-be7c-27a872eccc39_1.webp";
 
 export const ContactsBox = styled.main`
   min-height: 100vh;
@@ -14,8 +14,16 @@ export const ContactsBox = styled.main`
 export const Backdrop = styled.div`
   min-height: 100vh;
   background:
-    radial-gradient(circle at 74% 18%, rgba(31, 189, 255, 0.08), transparent 22%),
-    radial-gradient(circle at 14% 60%, rgba(var(--accent-rgb), 0.04), transparent 24%);
+    radial-gradient(
+      circle at 74% 18%,
+      rgba(31, 189, 255, 0.08),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 14% 60%,
+      rgba(var(--accent-rgb), 0.04),
+      transparent 24%
+    );
 `;
 
 export const PageBox = styled.section`
@@ -36,7 +44,12 @@ export const Hero = styled.section`
     position: absolute;
     inset: 0 0 0 46%;
     background:
-      linear-gradient(90deg, rgba(3, 15, 28, 0.9) 0%, rgba(3, 15, 28, 0.18) 26%, rgba(3, 15, 28, 0.08) 100%),
+      linear-gradient(
+        90deg,
+        rgba(3, 15, 28, 0.9) 0%,
+        rgba(3, 15, 28, 0.18) 26%,
+        rgba(3, 15, 28, 0.08) 100%
+      ),
       url(${bg}) 76% center / cover no-repeat;
     opacity: 0.88;
     border-left: 1px solid rgba(55, 162, 237, 0.12);
@@ -135,7 +148,11 @@ export const Panel = styled.section`
   padding: 22px;
   margin-bottom: 16px;
   border-radius: 14px;
-  background: linear-gradient(180deg, rgba(7, 21, 39, 0.9), rgba(4, 14, 28, 0.94));
+  background: linear-gradient(
+    180deg,
+    rgba(7, 21, 39, 0.9),
+    rgba(4, 14, 28, 0.94)
+  );
   border: 1px solid rgba(72, 173, 255, 0.2);
   box-shadow:
     inset 0 0 24px rgba(0, 190, 255, 0.025),
@@ -182,7 +199,9 @@ export const InfoCard = styled.div`
   border-radius: 10px;
   background: rgba(9, 31, 54, 0.82);
   border: 1px solid rgba(79, 174, 255, 0.17);
-  transition: border-color 180ms ease, transform 180ms ease;
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease;
 
   &:hover {
     transform: translateY(-1px);
@@ -226,7 +245,10 @@ export const SocialCard = styled.a`
   text-decoration: none;
   text-align: center;
   font-size: 13px;
-  transition: transform 180ms ease, border-color 180ms ease, color 180ms ease;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
 
   &:hover {
     border-color: rgba(var(--accent-rgb), 0.52);
@@ -241,7 +263,11 @@ export const Availability = styled.section`
   align-items: flex-start;
   padding: 20px;
   border-radius: 14px;
-  background: linear-gradient(180deg, rgba(7, 29, 39, 0.92), rgba(4, 20, 29, 0.94));
+  background: linear-gradient(
+    180deg,
+    rgba(7, 29, 39, 0.92),
+    rgba(4, 20, 29, 0.94)
+  );
   border: 1px solid rgba(40, 232, 195, 0.42);
   box-shadow: inset 0 0 24px rgba(40, 232, 195, 0.025);
 `;
@@ -252,7 +278,9 @@ export const AvailabilityDot = styled.span`
   border-radius: 50%;
   margin-top: 5px;
   background: #28e8c3;
-  box-shadow: 0 0 0 6px rgba(40, 232, 195, 0.07), 0 0 16px rgba(40, 232, 195, 0.72);
+  box-shadow:
+    0 0 0 6px rgba(40, 232, 195, 0.07),
+    0 0 16px rgba(40, 232, 195, 0.72);
 `;
 
 export const AvailabilityTitle = styled.h3`
@@ -288,7 +316,9 @@ export const Input = styled.input`
   outline: none;
   background: rgba(7, 24, 44, 0.92);
   color: #eef6ff;
-  transition: border-color 180ms ease, box-shadow 180ms ease;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 
   &::placeholder {
     color: #58708f;
@@ -309,7 +339,9 @@ export const Message = styled.textarea`
   resize: vertical;
   background: rgba(7, 24, 44, 0.92);
   color: #eef6ff;
-  transition: border-color 180ms ease, box-shadow 180ms ease;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 
   &::placeholder {
     color: #58708f;
@@ -330,7 +362,10 @@ export const SendButton = styled.button`
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 0 22px rgba(var(--accent-rgb), 0.16);
-  transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    opacity 180ms ease;
 
   &:hover:not(:disabled) {
     transform: translateY(-1px);
@@ -390,7 +425,11 @@ export const FooterCard = styled.div`
   position: relative;
   padding: 20px;
   border-radius: 13px;
-  background: linear-gradient(180deg, rgba(7, 21, 39, 0.88), rgba(4, 14, 28, 0.94));
+  background: linear-gradient(
+    180deg,
+    rgba(7, 21, 39, 0.88),
+    rgba(4, 14, 28, 0.94)
+  );
   border: 1px solid rgba(72, 173, 255, 0.19);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
 

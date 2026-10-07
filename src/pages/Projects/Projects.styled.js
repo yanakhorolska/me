@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
-import bg from "../../images/Leonardo_Diffusion_dark_picture_with_some_lines_dots_abstracti_1.jpg";
-import petly from "../../images/petly.jpg";
-import weather from "../../images/weather.jpg";
-import girl from "../../images/Leonardo_Diffusion_girlcat_with_headphones_and_laptop_digital_2.jpg";
-import taskBg from "../../images/Default_background_image_for_website_dark_colors_digital_lapto_0_2cefb854-032c-47e6-b827-5bee2040b37f_1.jpg";
+import bg from "../../images/Leonardo_Diffusion_dark_picture_with_some_lines_dots_abstracti_1.webp";
+import petly from "../../images/petly.webp";
+import weather from "../../images/weather.webp";
+import girl from "../../images/Leonardo_Diffusion_girlcat_with_headphones_and_laptop_digital_2.webp";
+import taskBg from "../../images/Default_background_image_for_website_dark_colors_digital_lapto_0_2cefb854-032c-47e6-b827-5bee2040b37f_1.webp";
 
 export const ProjectsBox = styled.main`
   min-height: 100vh;
@@ -18,8 +18,16 @@ export const ProjectsBox = styled.main`
 export const Backdrop = styled.div`
   min-height: 100vh;
   background:
-    radial-gradient(circle at 68% 10%, rgba(42, 153, 255, 0.075), transparent 22%),
-    radial-gradient(circle at 20% 62%, rgba(var(--accent-rgb), 0.045), transparent 24%);
+    radial-gradient(
+      circle at 68% 10%,
+      rgba(42, 153, 255, 0.075),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 20% 62%,
+      rgba(var(--accent-rgb), 0.045),
+      transparent 24%
+    );
 `;
 
 export const PageBox = styled.section`
@@ -71,7 +79,11 @@ export const FeaturedCard = styled.section`
   padding: 20px;
   margin-top: 28px;
   border-radius: 14px;
-  background: linear-gradient(180deg, rgba(6, 22, 41, 0.9), rgba(4, 15, 29, 0.94));
+  background: linear-gradient(
+    180deg,
+    rgba(6, 22, 41, 0.9),
+    rgba(4, 15, 29, 0.94)
+  );
   border: 1px solid rgba(59, 171, 255, 0.28);
   box-shadow:
     inset 0 0 26px rgba(0, 188, 255, 0.025),
@@ -170,7 +182,9 @@ export const PrimaryLink = styled.a`
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  transition:
+    transform 400ms ease,
+    box-shadow 400ms ease;
 
   &:hover {
     transform: translateY(-1px);
@@ -188,7 +202,9 @@ export const SecondaryLink = styled.a`
   color: #dce8f7;
   font-size: 13px;
   text-decoration: none;
-  transition: border-color 180ms ease, color 180ms ease;
+  transition:
+    border-color 400ms ease,
+    color 400ms ease;
 
   &:hover {
     color: var(--accent);
@@ -260,14 +276,17 @@ export const ProjectsGrid = styled.div`
 export const ProjectCard = styled.article`
   border-radius: 13px;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(7, 21, 39, 0.9), rgba(4, 14, 28, 0.95));
+  background: linear-gradient(
+    180deg,
+    rgba(7, 21, 39, 0.9),
+    rgba(4, 14, 28, 0.95)
+  );
   border: 1px solid rgba(72, 173, 255, 0.19);
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
-  transition: transform 180ms ease, border-color 180ms ease;
+  transition: border-color 400ms cubic-bezier(0.22, 1, 0.36, 1);
 
   &:hover {
-    transform: translateY(-3px);
-    border-color: rgba(var(--accent-rgb), 0.36);
+    box-shadow: 3px 3px rgba(42, 37, 90, 0.76);
   }
 `;
 

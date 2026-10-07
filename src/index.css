@@ -34,7 +34,9 @@ textarea,
 select,
 label,
 [role="button"] {
-  cursor: url("./images/cursor.png") 4 4, auto !important;
+  cursor:
+    url("./images/cursor.png") 4 4,
+    auto !important;
 }
 
 body::-webkit-scrollbar {
@@ -98,10 +100,6 @@ a {
   text-decoration: none;
 }
 
-main {
-  animation: pageReveal 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
 .page-fallback {
   min-height: 100vh;
   background: #03101d;
@@ -121,11 +119,11 @@ main {
 
 @media (prefers-reduced-motion: reduce) {
   html {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
   }
 
   main {
-    animation: none;
+    animation: pageReveal 800ms ease-out both;
   }
 
   *,

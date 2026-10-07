@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import bg from "../../images/Leonardo_Creative_dark_picture_with_some_lines_dots_abstractio_1.jpg";
-import girl from "../../images/Leonardo_Diffusion_girlcat_with_headphones_and_laptop_digital_2.jpg";
+import bg from "../../images/Leonardo_Diffusion_dark_picture_with_some_lines_dots_abstracti_1.webp";
+import girl from "../../images/Leonardo_Diffusion_girlcat_with_headphones_and_laptop_digital_2.webp";
 
 export const AboutBox = styled.main`
   min-height: 100vh;
@@ -15,8 +15,16 @@ export const AboutBox = styled.main`
 export const Backdrop = styled.div`
   min-height: 100vh;
   background:
-    radial-gradient(circle at 18% 18%, rgba(30, 202, 255, 0.08), transparent 24%),
-    radial-gradient(circle at 84% 46%, rgba(85, 81, 255, 0.055), transparent 26%);
+    radial-gradient(
+      circle at 18% 18%,
+      rgba(30, 202, 255, 0.08),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 84% 46%,
+      rgba(85, 81, 255, 0.055),
+      transparent 26%
+    );
 `;
 
 export const PageBox = styled.section`
@@ -144,7 +152,11 @@ export const TraitCard = styled.div`
   display: flex;
   align-items: center;
   border-radius: 11px;
-  background: linear-gradient(180deg, rgba(8, 28, 50, 0.82), rgba(6, 21, 39, 0.9));
+  background: linear-gradient(
+    180deg,
+    rgba(8, 28, 50, 0.82),
+    rgba(6, 21, 39, 0.9)
+  );
   border: 1px solid rgba(59, 163, 239, 0.2);
   box-shadow: inset 0 0 18px rgba(0, 190, 255, 0.025);
 `;
@@ -165,7 +177,11 @@ export const SectionCard = styled.section`
   padding: 24px 24px 22px;
   margin-bottom: 22px;
   border-radius: 14px;
-  background: linear-gradient(180deg, rgba(6, 21, 39, 0.86), rgba(4, 15, 29, 0.91));
+  background: linear-gradient(
+    180deg,
+    rgba(6, 21, 39, 0.86),
+    rgba(4, 15, 29, 0.91)
+  );
   border: 1px solid rgba(55, 157, 232, 0.19);
   box-shadow:
     inset 0 0 30px rgba(0, 183, 255, 0.025),
@@ -260,7 +276,9 @@ export const SkillItem = styled.span`
   border: 1px solid rgba(78, 151, 225, 0.16);
   color: #c8d7e8;
   font-size: 11px;
-  transition: border-color 180ms ease, transform 180ms ease;
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease;
 
   &:hover {
     transform: translateY(-1px);
@@ -277,7 +295,11 @@ export const SoftSkills = styled.div`
 export const SoftSkill = styled.span`
   padding: 10px 17px;
   border-radius: 999px;
-  background: linear-gradient(180deg, rgba(17, 38, 64, 0.88), rgba(8, 25, 45, 0.9));
+  background: linear-gradient(
+    180deg,
+    rgba(17, 38, 64, 0.88),
+    rgba(8, 25, 45, 0.9)
+  );
   border: 1px solid rgba(83, 163, 236, 0.27);
   color: #d9e7f6;
   font-size: 12px;
