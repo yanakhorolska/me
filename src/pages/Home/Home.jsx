@@ -98,18 +98,18 @@ export const Home = () => {
                   <EditorFilename>yana.js</EditorFilename>
                 </EditorBar>
                 <EditorBody>
-                  <CodeLine><LineNumber>01</LineNumber><CodeComment>// hello, world! ✨</CodeComment></CodeLine>
+                  <CodeLine><LineNumber>01</LineNumber><CodeComment>{'// hello, world! ✨'}</CodeComment></CodeLine>
                   <CodeLine><LineNumber>02</LineNumber><CodeKeyword>const</CodeKeyword> <CodeVariable>developer</CodeVariable> = {"{"}</CodeLine>
                   <CodeLine><LineNumber>03</LineNumber>  name: <CodeString>&quot;Yana&quot;</CodeString>,</CodeLine>
                   <CodeLine><LineNumber>04</LineNumber>  mindset: <CodeString>&quot;always curious&quot;</CodeString>,</CodeLine>
                   <CodeLine><LineNumber>05</LineNumber>  loves: [<CodeString>&quot;code&quot;</CodeString>, <CodeString>&quot;books&quot;</CodeString>, <CodeString>&quot;creating&quot;</CodeString>],</CodeLine>
                   <CodeLine><LineNumber>06</LineNumber>{"};"}</CodeLine>
-                  <CodeLine><LineNumber>07</LineNumber><CodeComment>// the next chapter starts here</CodeComment></CodeLine>
+                  <CodeLine><LineNumber>07</LineNumber><CodeComment>{'// the next chapter starts here'}</CodeComment></CodeLine>
                   <CodeLine>
                     <LineNumber>08</LineNumber>
                     <span><CodeKeyword>const</CodeKeyword> <CodeVariable>nextChapter</CodeVariable> = <CodeString>&quot;{typedIdea}&quot;</CodeString><Cursor />;</span>
                   </CodeLine>
-                  <CodeLine><LineNumber>09</LineNumber><CodeComment>// imagination + persistence = progress</CodeComment></CodeLine>
+                  <CodeLine><LineNumber>09</LineNumber><CodeComment>{'// imagination + persistence = progress'}</CodeComment></CodeLine>
                 </EditorBody>
               </EditorWindow>
 
